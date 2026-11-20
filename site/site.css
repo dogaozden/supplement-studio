@@ -1,0 +1,438 @@
+/* Supplement Studio: landing page.
+   A fine legal publisher crossed with a precise modern tool: Garamond
+   for everything that is read, hairline rules instead of boxes, one
+   oxblood accent. Every color, font and size comes from theme.css
+   (builder/theme.css is the source). No JavaScript, no web fonts beyond
+   the Latin EB Garamond subsets in assets/fonts. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-7);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.1875rem;               /* 19px: Garamond reads small */
+  line-height: 1.5;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: lining-nums;  /* lining figures: the page is full of citations, dates and sizes */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --gutter: clamp(20px, 4.5vw, 64px);
+}
+
+::selection { background: var(--accent-wash); }
+
+img { display: block; max-width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-color: var(--rule-strong);
+}
+a:hover { color: var(--accent-ink); text-decoration-color: var(--accent); }
+
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+/* the section sign is the icon */
+.sect { color: var(--accent); }
+
+.skip-link {
+  position: absolute; left: var(--space-4); top: -100px; z-index: 10;
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+  font: var(--step-0)/1.2 var(--sans);
+}
+.skip-link:focus { top: var(--space-4); }
+
+.wrap {
+  width: min(1240px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+
+/* ---------------------------------------------------------------- masthead */
+
+.masthead { border-bottom: 1px solid var(--rule); }
+.masthead-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+}
+
+.wordmark {
+  display: inline-flex; align-items: baseline; gap: .5em;
+  font: 500 var(--step-2)/1 var(--serif);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .06em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wordmark .sect { font-size: 1.2em; font-variant-caps: normal; }
+a.wordmark:hover { color: var(--ink); }
+
+.masthead-nav { display: flex; align-items: center; gap: var(--space-6); }
+.masthead-nav a:not(.btn) {
+  font-size: var(--step-1);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .06em;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.masthead-nav a:not(.btn):hover { color: var(--accent-ink); text-decoration: underline; text-decoration-color: var(--accent); }
+
+/* ----------------------------------------------------------------- buttons
+   Buttons are small UI controls: the one place the system sans is used. */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  font: 500 var(--step-0)/1 var(--sans);
+  letter-spacing: .005em;
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: var(--surface); }
+.btn-primary:hover { background: var(--accent-ink); color: var(--surface); }
+.btn-quiet {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--step--1);
+  border-color: var(--rule-strong);
+  color: var(--ink);
+  background: var(--surface);
+}
+.btn-quiet:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* -------------------------------------------------------------------- grids */
+
+.hero-grid, .part-grid, .colophon-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--space-5);
+}
+
+/* --------------------------------------------------------------------- hero */
+
+.hero {
+  --edge: max(var(--gutter), calc((100vw - 1240px) / 2));   /* page margin outside .wrap */
+  margin-bottom: clamp(48px, 6vw, 88px);
+  overflow-x: clip;
+}
+.hero-grid { align-items: stretch; row-gap: 0; }
+.hero-copy {
+  grid-column: 1 / span 5;
+  align-self: center;
+  padding-block: clamp(40px, 6vw, 88px);
+}
+.hero-art  { grid-column: 6 / -1; }
+
+.eyebrow {
+  display: flex; align-items: center; gap: var(--space-3);
+  font-size: var(--step-1);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .08em;
+  color: var(--ink-3);
+}
+.eyebrow::before { content: ""; width: var(--space-6); height: 1px; background: var(--ink-3); }
+
+h1 {
+  margin: var(--space-5) 0 var(--space-5);
+  font: 500 clamp(2.5rem, 4.7vw, 4.25rem)/1.04 var(--serif);
+  letter-spacing: -.012em;
+  text-wrap: balance;
+  font-variant-numeric: lining-nums;
+}
+h1 .figure { font-variant-numeric: lining-nums; }
+h1 em { font-style: italic; }
+
+.lede {
+  max-width: 30em;
+  font-size: var(--step-2);
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--space-4) var(--space-6);
+  margin-top: var(--space-6);
+}
+.sample-link { font-size: var(--step-1); line-height: 1.35; max-width: 17em; }
+
+/* the book: two pages on the same well the studio previews them on */
+.hero-art {
+  display: flex; flex-direction: column; justify-content: center;
+  margin-right: calc(-1 * var(--edge));                   /* bleed to the window edge */
+  padding: clamp(32px, 5vw, 72px) clamp(20px, 3.4vw, 48px);
+  background: var(--well);
+}
+/* one page, cropped, at actual size: the type is the argument */
+.page-detail {
+  display: block; width: 100%; max-width: 640px; height: auto; margin-inline: auto;
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  box-shadow: var(--shadow-pop);
+}
+.hero-art figcaption {
+  margin-top: var(--space-4);
+  font-style: italic;
+  font-size: var(--step-0);
+  color: var(--ink-2);
+  text-align: center;
+}
+
+/* ------------------------------------------------------- numbered sections
+   Each section is set like a statute: the section sign and number, the
+   title in the left margin, the text on the right. The right column
+   starts where the book on the hero starts. */
+
+.part { padding-bottom: clamp(56px, 7vw, 104px); }
+.part-grid { border-top: 1px solid var(--rule); padding-top: var(--space-7); }
+
+.part-head {
+  grid-column: 1 / span 5;
+  align-self: start;
+  position: sticky; top: var(--space-5);
+  padding-right: var(--space-7);
+}
+.part-head h2 {
+  font: 500 var(--step-4)/1.05 var(--serif);
+  letter-spacing: -.005em;
+  text-wrap: balance;
+}
+.part-no {
+  display: block;
+  margin-bottom: var(--space-3);
+  font: 400 var(--step-3)/1 var(--serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--ink-3);
+  letter-spacing: 0;
+}
+.deck {
+  max-width: 17em;
+  margin-top: var(--space-4);
+  font-style: italic;
+  font-size: var(--step-1);
+  line-height: 1.4;
+  color: var(--ink-3);
+}
+.part-body { grid-column: 6 / -1; min-width: 0; }
+
+/* § 1: steps */
+.steps > li {
+  display: grid;
+  grid-template-columns: var(--space-8) minmax(0, 1fr);
+  column-gap: var(--space-2);
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--rule);
+}
+.steps > li:first-child { border-top: 0; padding-top: 0; }
+.step-no {
+  font: 400 var(--step-4)/1 var(--serif);
+  font-variant-numeric: lining-nums;
+  color: var(--ink-3);
+}
+.steps h3 { font: 500 var(--step-3)/1.15 var(--serif); margin-bottom: var(--space-2); }
+.steps p { max-width: 33em; color: var(--ink-2); text-wrap: pretty; }
+
+.lin { font-variant-numeric: lining-nums; }
+/* digits inside small caps: EB Garamond's small-cap figures read as letters ("I5") */
+.fig { font-variant-caps: normal; font-variant-numeric: lining-nums; font-size: .82em; letter-spacing: .04em; }
+
+.cites {
+  max-width: 28em;
+  font-variant-numeric: lining-nums;
+  margin-top: var(--space-5);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-size: var(--step-1);
+}
+.cites li {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: var(--space-4);
+  padding-block: var(--space-2);
+}
+.cites li + li { border-top: 1px solid var(--rule); }
+.cite-full { color: var(--ink-3); }
+
+.aside {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+  font-size: var(--step-1);
+  color: var(--ink-2);
+}
+.label {
+  margin-right: var(--space-3);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .06em;
+  color: var(--ink-3);
+}
+
+/* § 2 and the footer: spec lists (colophon style) */
+.spec {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.spec > div {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  column-gap: var(--space-5);
+  padding-block: var(--space-4);
+}
+.spec > div + div { border-top: 1px solid var(--rule); }
+dt {
+  font-size: var(--step-1);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .06em;
+  color: var(--ink-3);
+  padding-top: 2px;
+}
+.spec dd { text-wrap: pretty; }
+
+/* § 3: catalog with TOC-style leaders */
+.list-title {
+  display: flex; align-items: baseline; gap: var(--space-3);
+  margin: var(--space-7) 0 var(--space-3);
+  font: 500 var(--step-2)/1.2 var(--serif);
+}
+.part-body > .list-title:first-child { margin-top: 0; }
+.list-cite {
+  font-size: var(--step-1); font-weight: 400;
+  font-variant-caps: all-small-caps; letter-spacing: .06em;
+  font-variant-numeric: lining-nums;
+  color: var(--ink-3);
+}
+.catalog {
+  font-variant-numeric: lining-nums tabular-nums;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-size: var(--step-1);
+  line-height: 1.35;
+}
+.catalog li {
+  display: flex; align-items: baseline; gap: var(--space-2);
+  padding-block: var(--space-2);
+}
+.catalog .name { min-width: 0; text-wrap: pretty; }   /* no lone "1934" on a narrow screen */
+.catalog .leader {
+  flex: 1 1 var(--space-5);
+  min-width: var(--space-5);
+  border-bottom: 2px dotted var(--rule-strong);
+  transform: translateY(-.22em);
+}
+.catalog .cite {
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.currency {
+  margin-top: var(--space-5);
+  max-width: 36em;
+  font-style: italic;
+  font-size: var(--step-1);
+  color: var(--ink-2);
+}
+
+/* § 4: questions */
+.faq {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.faq > div { padding-block: var(--space-5); }
+.faq > div + div { border-top: 1px solid var(--rule); }
+.faq dt {
+  margin-bottom: var(--space-2);
+  font: 500 var(--step-2)/1.25 var(--serif);
+  font-variant-caps: normal;
+  letter-spacing: 0;
+  color: var(--ink);
+  padding-top: 0;
+}
+.faq dd { max-width: 36em; color: var(--ink-2); text-wrap: pretty; }
+.mono { font-family: var(--mono); font-size: .85em; }
+
+/* ----------------------------------------------------------------- colophon */
+
+.colophon {
+  background: var(--well);
+  border-top: 1px solid var(--rule-strong);
+  padding-block: var(--space-7) var(--space-8);
+}
+.colophon-brand { grid-column: 1 / span 5; padding-right: var(--space-7); }
+.colophon-brand .wordmark { font-size: var(--step-3); }
+.colophon-line { margin: var(--space-3) 0 var(--space-5); color: var(--ink-2); font-size: var(--step-1); }
+.colophon-spec { grid-column: 6 / -1; font-size: var(--step-0); line-height: 1.5; }
+.colophon-spec > div {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  column-gap: var(--space-5);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--rule-strong);
+}
+.colophon-spec > div:first-child { border-top: 1px solid var(--ink); }
+.colophon-spec dt { font-size: var(--step-0); color: var(--ink-2); }
+.colophon-spec dd { color: var(--ink-2); }
+
+/* -------------------------------------------------------------- responsive */
+
+@media (max-width: 1199px) {
+  .hero-copy { grid-column: 1 / span 6; }
+  .hero-art  { grid-column: 7 / -1; }
+  .part-head { grid-column: 1 / span 4; padding-right: var(--space-5); }
+  .part-body { grid-column: 5 / -1; }
+  .colophon-brand { grid-column: 1 / span 4; padding-right: var(--space-5); }
+  .colophon-spec { grid-column: 5 / -1; }
+}
+
+@media (max-width: 899px) {
+  .masthead-nav a:not(.btn) { display: none; }   /* the page is short; the button stays */
+  .hero-copy, .hero-art { grid-column: 1 / -1; }
+  .hero-copy { padding-block: var(--space-7) var(--space-6); }
+  .hero-art { margin-inline: calc(-1 * var(--edge)); padding-inline: var(--edge); }
+  .page-detail, .hero-art figcaption { width: 100%; max-width: 40rem; margin-inline: auto; }
+  .part-grid { padding-top: var(--space-6); }
+  .part-head {
+    grid-column: 1 / -1; position: static;
+    padding-right: 0; margin-bottom: var(--space-6);
+    font-size: var(--step-3);
+  }
+  .part-no { margin-bottom: var(--space-2); }
+  .part-body, .colophon-spec { grid-column: 1 / -1; }
+  .colophon-brand { grid-column: 1 / -1; padding-right: 0; margin-bottom: var(--space-7); }
+}
+
+/* below this the hero crop is scaled down, so the caption must not say "actual size" */
+@media (max-width: 719px) { .at-size { display: none; } }
+
+@media (max-width: 639px) {
+  body { font-size: 1.125rem; }
+  .masthead-row { padding-block: var(--space-3); }
+  .wordmark { font-size: var(--step-1); }
+  .hero-art { padding-block: var(--space-6); }
+  .steps > li { grid-template-columns: 2.25rem minmax(0, 1fr); }
+  .step-no { font-size: var(--step-3); }
+  .steps h3 { font-size: var(--step-2); }
+  .spec > div, .colophon-spec > div { grid-template-columns: 1fr; row-gap: var(--space-1); }
+  .eyebrow { font-size: var(--step-0); letter-spacing: .06em; gap: var(--space-2); }
+  .eyebrow::before { width: var(--space-5); flex: none; }
+  .lede { font-size: 1.1875rem; }
+  .catalog li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--space-4); }
+  .catalog .leader { display: none; }
+  .actions .btn { width: 100%; }
+}

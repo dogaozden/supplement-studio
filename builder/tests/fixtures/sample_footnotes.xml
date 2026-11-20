@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Shapes taken from the real Title 15 XML (release point 119-134): footnote
+     refs + bodies spliced into headings and running text, later bare <sup>
+     markers, mixed content, provisos, levels, subitems, and a table. -->
+<uscDoc xmlns="http://xml.house.gov/schemas/uslm/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" identifier="/us/usc/t15">
+<meta><docPublicationName>Online@119-134</docPublicationName></meta>
+<main>
+<title identifier="/us/usc/t15"><num value="15">Title 15—</num><heading>COMMERCE AND TRADE</heading>
+<chapter identifier="/us/usc/t15/ch2B"><num value="2B">CHAPTER 2B—</num><heading>SECURITIES EXCHANGES</heading>
+<section identifier="/us/usc/t15/s78c"><num value="78c">§ 78c.</num><heading>Definitions</heading>
+<subsection identifier="/us/usc/t15/s78c/a"><num value="a">(a)</num>
+<paragraph identifier="/us/usc/t15/s78c/a/80"><num value="80">(80)</num><heading>Emerging growth company.—<ref class="footnoteRef" idref="fn7">7</ref><note type="footnote" id="fn7"><num>7</num> So in original. Two pars. (80) have been enacted.</note></heading>
+<content>The term means an issuer that had total annual gross revenues of less than $1,000,000,000.</content></paragraph>
+<paragraph identifier="/us/usc/t15/s78c/a/81"><num value="81">(81)</num><content>Determined in accordance with section 4605(j) <ref class="footnoteRef" idref="fn1">1</ref><note type="footnote" id="fn1"><num>1</num> See References in Text note below.</note> of title 50, and again under section 4605(j) <sup>1</sup> of title 50.</content></paragraph>
+</subsection>
+<subsection identifier="/us/usc/t15/s78c/b"><num value="b">(b)</num><heading>Funding portal<ref class="footnoteRef" idref="fn9">9</ref><note type="footnote" id="fn9"><num>9</num> So in original. Probably should be “(2)”.</note></heading>
+<chapeau>Lead-in text with a footnote.<ref class="footnoteRef" idref="fn3">3</ref><note type="footnote" id="fn3"><num>3</num> Words of <ref href="/us/usc/t15/s78j">section 78j of this title</ref> follow.</note></chapeau>
+<paragraph identifier="/us/usc/t15/s78c/b/1"><num value="1">(1)</num><content> a copy of the underlying agreements.<p>In case of certificates of deposit, the Commission shall establish rules.</p></content></paragraph>
+<paragraph identifier="/us/usc/t15/s78c/b/2"><num value="2">(2)</num><chapeau>if the Court finds—</chapeau>
+<level identifier="/us/usc/t15/s78c/b/2/1"><num value="1">(1)</num><content> a Commission determination, or</content></level>
+<level identifier="/us/usc/t15/s78c/b/2/2"><num value="2">(2)</num><content> a Commission rule,</content></level>
+<proviso><i>Provided</i>, That the indenture shall be deemed to contain a provision.</proviso>
+</paragraph>
+<paragraph identifier="/us/usc/t15/s78c/b/3"><num value="3">(3)</num><content>by—</content>
+<item identifier="/us/usc/t15/s78c/b/3/A"><num value="A">(A)</num><content>for example, by—</content>
+<subitem identifier="/us/usc/t15/s78c/b/3/A/AA"><num value="AA">(AA)</num><content> electing executive officers;</content></subitem>
+<subitem identifier="/us/usc/t15/s78c/b/3/A/BB"><num value="BB">(BB)</num><content> approving the budget.</content></subitem>
+</item></paragraph>
+</subsection>
+<sourceCredit>(June 6, 1934, ch. 404, title I, § 3, 48 Stat. 882.)</sourceCredit>
+</section>
+<section identifier="/us/usc/t15/s78d"><num value="78d">§ 78d.</num><heading>Table section</heading>
+<content><p>Fees:</p>
+<xhtml:table><xhtml:thead><xhtml:tr><xhtml:th>Fiscal year</xhtml:th><xhtml:th colspan="2">Amount &amp; rate</xhtml:th></xhtml:tr></xhtml:thead>
+<xhtml:tbody><xhtml:tr><xhtml:td><xhtml:p>2024</xhtml:p><xhtml:p>(est.)</xhtml:p></xhtml:td><xhtml:td>$1.5 &lt; $2<sup>1</sup></xhtml:td><xhtml:td>3%</xhtml:td></xhtml:tr></xhtml:tbody></xhtml:table></content>
+<sourceCredit>(June 6, 1934, ch. 404, title I, § 4, 48 Stat. 883.)</sourceCredit>
+</section>
+</chapter>
+</title>
+</main>
+</uscDoc>

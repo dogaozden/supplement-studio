@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "default": "securities",
+  "corpora": [
+    {
+      "id": "securities",
+      "label": "Federal Securities Laws",
+      "path": "./corpus.json"
+    }
+  ]
+}

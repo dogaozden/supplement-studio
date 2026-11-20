@@ -1,0 +1,42 @@
+name: test
+
+on:
+  push: {}
+  pull_request: {}
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # Minimal deps for the non-e2e suite: lxml + requests (imported by
+      # builder/build/*) and pytest. No playwright/pillow — the e2e tree
+      # is --ignore'd below because its modules import playwright.sync_api
+      # and PIL at collection time, which "-m 'not e2e'" alone won't avoid.
+      - name: Install test dependencies
+        run: pip install -r builder/build/requirements.txt pytest==8.3.3 pypdf==5.9.0 pdfplumber==0.11.4
+      # The PDF engine's Typst version (typst.ts bundles Typst 0.14.2): the
+      # CLI compiles the same template + document so test_pdf_typst.py can
+      # check bookmarks, contents links, cross-reference targets and tagging.
+      - name: Install Typst 0.14.2
+        run: |
+          curl -sSL https://github.com/typst/typst/releases/download/v0.14.2/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJ
+          echo "TYPST_BIN=$PWD/typst-x86_64-unknown-linux-musl/typst" >> "$GITHUB_ENV"
+      - name: Unit suite (incl. share codec, renderer parity, PDF structure — needs node + typst)
+        run: pytest builder/tests -v -m "not e2e" --ignore=builder/tests/e2e
+      - name: Share codec node wrapper (direct)
+        run: node builder/tests/node/share_roundtrip.mjs

@@ -1,0 +1,193 @@
+{
+  "version": "1",
+  "generated_at": "2026-04-14T00:00:00Z",
+  "source": {
+    "usc_release_point": "",
+    "usc_generated": "",
+    "usc_release_label": "",
+    "ecfr_date": "2026-04-10"
+  },
+  "meta": {
+    "id": "securities",
+    "label": "Federal Securities Laws",
+    "defaultTitle": "Federal Securities Laws — Statutory Supplement",
+    "uscCitePrefix": "15 U.S.C.",
+    "cfrCitePrefix": "17 C.F.R.",
+    "modes": {
+      "codified": "Codified (U.S.C.)",
+      "original": "Original acts"
+    }
+  },
+  "acts": [
+    {
+      "id": "act-ch2A",
+      "short_title": "Securities Act of 1933",
+      "usc_chapter": "15/2A",
+      "pub_law": "",
+      "stat_cite": "",
+      "original_name_short": "Securities Act",
+      "order": 1,
+      "usc_range": "15 U.S.C. §§ 77a–77e",
+      "sections": [
+        {
+          "id": "s-77a",
+          "codified": {
+            "num": "77a",
+            "cite": "15 U.S.C. § 77a"
+          },
+          "original": {
+            "num": "1",
+            "cite": "Securities Act of 1933 § 1"
+          },
+          "heading": "Short title",
+          "status": "active",
+          "content": [
+            {
+              "type": "p",
+              "text": "This subchapter may be cited as the \"Securities Act of 1933\"."
+            }
+          ],
+          "source_credit": "(May 27, 1933, ch. 38, title I, § 1, 48 Stat. 74.)",
+          "notes": [
+            {
+              "heading": "Statutory Notes and Related Subsidiaries",
+              "blocks": []
+            },
+            {
+              "heading": "Short Title of 2012 Amendment",
+              "blocks": [
+                {
+                  "type": "p",
+                  "text": "Pub. L. 112–142, § 1, July 9, 2012, 126 Stat. 989, provided that this Act may be cited as the \"Church Plan Investment Clarification Act\"."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s-77e",
+          "codified": {
+            "num": "77e",
+            "cite": "15 U.S.C. § 77e"
+          },
+          "original": {
+            "num": "5",
+            "cite": "Securities Act of 1933 § 5"
+          },
+          "heading": "Prohibitions relating to interstate commerce and the mails",
+          "status": "active",
+          "content": [
+            {
+              "type": "subsection",
+              "num": "a",
+              "heading": "Sale or delivery after sale of unregistered securities",
+              "children": [
+                {
+                  "type": "chapeau",
+                  "text": "Unless a registration statement is in effect as to a security, it shall be unlawful for any person, directly or indirectly—"
+                },
+                {
+                  "type": "paragraph",
+                  "num": "1",
+                  "heading": "",
+                  "text": "to make use of any means or instruments of transportation or communication in interstate commerce or of the mails to sell such security through the use or medium of any prospectus or otherwise; or"
+                },
+                {
+                  "type": "paragraph",
+                  "num": "2",
+                  "heading": "",
+                  "text": "to carry or cause to be carried through the mails or in interstate commerce, by any means or instruments of transportation, any such security for the purpose of sale or for delivery after sale. See also section 77j of this title."
+                }
+              ]
+            }
+          ],
+          "source_credit": "(May 27, 1933, ch. 38, title I, § 5, 48 Stat. 77.)",
+          "notes": [
+            {
+              "heading": "Short Title of 2015 Amendment",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": "501SHORT TITLE OF PHONY NOTE.This note is a test fixture."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "share_key": "SecuritiesAct"
+    },
+    {
+      "id": "act-ch2A-schIII",
+      "short_title": "Trust Indenture Act of 1939",
+      "usc_chapter": "15/2A",
+      "pub_law": "",
+      "stat_cite": "",
+      "original_name_short": "Trust Indenture Act",
+      "order": 6,
+      "usc_range": "15 U.S.C. § 77aaa",
+      "usc_subchapter": "schIII",
+      "sections": [
+        {
+          "id": "s-77aaa",
+          "codified": {
+            "num": "77aaa",
+            "cite": "15 U.S.C. § 77aaa"
+          },
+          "original": {
+            "num": "301",
+            "cite": "Trust Indenture Act of 1939 § 301"
+          },
+          "heading": "Short title",
+          "status": "active",
+          "content": [
+            {
+              "type": "p",
+              "text": "This subchapter may be cited as the \"Trust Indenture Act of 1939.\""
+            }
+          ],
+          "source_credit": "(May 27, 1933, ch. 38, title III, § 301, as added Aug. 3, 1939, ch. 411, 53 Stat. 1149.)",
+          "notes": []
+        }
+      ],
+      "share_key": "TrustIndentureAct"
+    },
+    {
+      "id": "act-ch2A-schII",
+      "short_title": "Corporation of Foreign Bondholders Act, 1933",
+      "usc_chapter": "15/2A",
+      "pub_law": "",
+      "stat_cite": "",
+      "original_name_short": "Foreign Bondholders Act",
+      "order": 8,
+      "usc_range": "15 U.S.C. § 77mm",
+      "usc_subchapter": "schII",
+      "sections": [
+        {
+          "id": "s-77mm",
+          "codified": {
+            "num": "77mm",
+            "cite": "15 U.S.C. § 77mm"
+          },
+          "original": {
+            "num": "212",
+            "cite": "Corporation of Foreign Bondholders Act, 1933 § 212"
+          },
+          "heading": "Short title",
+          "status": "active",
+          "content": [
+            {
+              "type": "p",
+              "text": "This subchapter may be cited as the \"Corporation of Foreign Bondholders Act, 1933.\""
+            }
+          ],
+          "source_credit": "(May 27, 1933, ch. 38, title II, § 212, 48 Stat. 95.)",
+          "notes": []
+        }
+      ],
+      "share_key": "ForeignBondholdersAct"
+    }
+  ],
+  "regulations": [],
+  "presets": []
+}

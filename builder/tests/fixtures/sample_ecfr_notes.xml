@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!-- Hand-trimmed from live eCFR XML (Title 17, 2026-10-29), keeping the element
+     shapes the parser has to handle: NOTE/EXTRACT/HD/FTNT/tables/MATH, italic
+     run-in headings, paragraph markers vs. parenthesized text, flattened
+     Regulation headings (HED1 + empty DIV7 + sibling DIV7s). -->
+<DIV5 N="230" TYPE="PART">
+<HEAD>PART 230&#x2014;GENERAL RULES AND REGULATIONS, SECURITIES ACT OF 1933
+</HEAD>
+<HED1>General</HED1>
+<NOTE>
+<HED>Note:</HED>
+<P>In &#xA7;&#xA7; 230.100 to 230.174, the numbers to the right of the decimal point correspond with the respective rule number.</P></NOTE>
+<DIV8 N="230.144A" TYPE="SECTION">
+<HEAD>&#xA7; 230.144A Private resales of securities to institutions.</HEAD>
+<NOTE>
+<HED>Preliminary Notes:</HED>
+<P>1. This section relates solely to the application of section 5 of the Act.</P>
+<P>2. Attempted compliance with this section does not act as an exclusive election.</P></NOTE>
+<P>(a) <I>Definitions.</I> (1) For purposes of this section, <I>qualified institutional buyer</I> shall mean:</P>
+<P>(i) Any of the following entities, acting for its own account:</P>
+<P>(A) Any <I>insurance company</I> as defined in section 2(a)(13) of the Act;</P>
+<NOTE>
+<HED>Note:</HED>
+<P>A purchase by an insurance company for its separate accounts shall be deemed a purchase for the account of such insurance company.</P></NOTE>
+<P>(B) Any <I>investment company</I> registered under the Investment Company Act of 1940.</P>
+<NOTE>
+<HED>Note 1 to paragraph (<E T="01">a</E>)(1)(<E T="01">i</E>):</HED>
+<P>An entity may be formed for the purpose of acquiring the securities offered.</P></NOTE>
+<P>(ii) Any <I>dealer</I> registered pursuant to section 15 of the Exchange Act;</P>
+<EXTRACT>
+<FP><I>Instruction to paragraph (a)(1):</I> Reservoir properties must be considered.</FP>
+<P>(1) Inside the extract, markers nest locally.</P>
+</EXTRACT>
+<P>(2) <I>Accredited investor.</I> <I>Accredited investor</I> shall mean any person.</P>
+<P>(b) <I>Accountant,</I> as used in this section, means a CPA.</P>
+<P>(c) <I>Conditions.</I>
+<SU>1</SU>
+<FTREF/> The following conditions apply.</P>
+<FTNT>
+<P><SU>1</SU> Paragraph (c) reflects proposals made in Release No. 6334.</P></FTNT>
+<P>(d) Preceding text.</P>
+<P>(1) First.</P>
+<P>(i) Deep.</P>
+<NOTE>
+<HED>Note to paragraph (<E T="01">d</E>)(1):</HED>
+<P>This note belongs to paragraph (d)(1), not to the deeper item.</P></NOTE>
+<P>(2) Second paragraph still nests under (d).</P>
+<HD1>Successful Efforts Method
+</HD1>
+<P>(e) <I>Method.</I> Text after a heading.</P>
+<P>(f) <I>Exemption.</I> The exemption applies.</P>
+<FP><I>Exemption.</I> An unnumbered paragraph keeps its italic lead.</FP>
+<P>(Name of Issuer)</P>
+<P>(g)-(h) [Reserved]</P>
+<DIV>
+<DIV class="gpotbl_div">
+<TABLE border="1" class="gpo_table">
+<CAPTION><P class="title">Fee Table</P></CAPTION>
+<THEAD>
+<TR>
+<TH rowspan="2" class="center">Name<br/>(#)</TH>
+<TH colspan="2" class="center">Amount &amp; rate <sup>1</sup></TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD class="left">A &lt; B</TD>
+<TD class="left"/>
+<TD class="left">3%</TD>
+</TR>
+</TBODY>
+<TFOOT>
+<TR><TD class="left" colspan="3">Total</TD></TR>
+</TFOOT>
+</TABLE>
+</DIV>
+</DIV>
+<MATH BORDER="NODRAW"><img src="/graphics/ec14no91.094.gif"/></MATH>
+<NOTE>
+<HED>Note to &#xA7; 230.144A:</HED>
+<P>A note to the whole rule goes to root level.</P></NOTE>
+<EDNOTE>
+<HED>Editorial Note:</HED><PSPACE>For Federal Register citations affecting this section, see the List of CFR Sections Affected.</PSPACE></EDNOTE>
+<CITA TYPE="N">[55 FR 17933, Apr. 30, 1990]
+</CITA>
+</DIV8>
+<DIV8 N="230.145" TYPE="SECTION">
+<HEAD>&#xA7; 230.145 Reclassification of securities.</HEAD>
+<P>(a) Text.</P>
+</DIV8>
+<DIV8 N="230.300-230.346" TYPE="SECTION">
+<HEAD>&#xA7;&#xA7; 230.300-230.346 [Reserved]</HEAD>
+</DIV8>
+<DIV7 N="ECFR1" TYPE="SUBJGRP">
+<HEAD>Regulation A&#x2014;Conditional Small Issues Exemption</HEAD>
+<DIV8 N="230.251" TYPE="SECTION">
+<HEAD>&#xA7; 230.251 Scope of exemption.</HEAD>
+<P>Text.</P>
+</DIV8>
+</DIV7>
+<HED1>Regulation C&#x2014;Registration</HED1>
+<DIV8 N="230.400" TYPE="SECTION">
+<HEAD>&#xA7; 230.400 Application of &#xA7;&#xA7; 230.400 to 230.494.</HEAD>
+<P>Text.</P>
+</DIV8>
+<DIV7 N="ECFR2" TYPE="SUBJGRP">
+<HEAD>general requirements</HEAD>
+<DIV8 N="230.401" TYPE="SECTION">
+<HEAD>&#xA7; 230.401 Requirements as to proper form.</HEAD>
+<P>Text.</P>
+</DIV8>
+</DIV7>
+<DIV7 N="ECFR3" TYPE="SUBJGRP">
+<HEAD>Regulation D&#x2014;Rules Governing the Limited Offer and Sale of Securities</HEAD>
+<DIV8 N="230.501" TYPE="SECTION">
+<HEAD>&#xA7; 230.501 Definitions and terms used in Regulation D.</HEAD>
+<P>Text.</P>
+</DIV8>
+<DIV8 N="230.506" TYPE="SECTION">
+<HEAD>&#xA7; 230.506 Exemption for limited offers and sales.</HEAD>
+<P>Text.</P>
+</DIV8>
+</DIV7>
+<DIV7 N="ECFR4" TYPE="SUBJGRP">
+<HEAD>Regulation S&#x2014;Rules Governing Offers and Sales Made Outside the United States</HEAD>
+</DIV7>
+<DIV8 N="230.901" TYPE="SECTION">
+<HEAD>&#xA7; 230.901 Definitions.</HEAD>
+<P>Text.</P>
+</DIV8>
+</DIV5>

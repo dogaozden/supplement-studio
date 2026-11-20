@@ -1,0 +1,38 @@
+# Cloudflare Pages headers file. scripts/build_site.py copies this to
+# deploy/_headers; Pages applies it at the edge.
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# Corpus: refresh hourly, serve stale while revalidating in the background.
+/app/corpus.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Vendored libraries and fonts never change in place — cache forever.
+/app/assets/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+/app/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML is never cached so deploys show up immediately. Paths are
+# enumerated explicitly (no catch-all) to avoid relying on header
+# override ordering between overlapping rules.
+/
+  Cache-Control: no-store
+/index.html
+  Cache-Control: no-store
+/app/
+  Cache-Control: no-store
+/app/index.html
+  Cache-Control: no-store
+/app/print.html
+  Cache-Control: no-store
+/samples/sample-reader.html
+  Cache-Control: no-store
+
+# Cloudflare Pages 308-redirects *.html URLs to extensionless paths
+# (not disableable), so the served URLs need their own rules too.
+/app/print
+  Cache-Control: no-store
+/samples/sample-reader
+  Cache-Control: no-store

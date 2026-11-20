@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>__TITLE__ · Supplement Studio</title>
+<script>
+/* saved display prefs, applied pre-paint so theme never flashes.
+   Light ('paper') is the default; 'dark' is the saved alternative. */
+try {
+  var _p = JSON.parse(localStorage.getItem('supplementReader.prefs') || '{}');
+  document.documentElement.dataset.theme = _p.theme === 'dark' ? 'dark' : 'paper';
+  if (_p.fs) document.documentElement.style.setProperty('--content-fs', _p.fs + 'px');
+  if (_p.measure === 'wide') document.documentElement.dataset.measure = 'wide';
+} catch (e) {}
+</script>
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="tb-nav"><button class="tool-btn" id="tocToggle" aria-expanded="false" aria-controls="toc">Contents</button></div>
+  <div class="tb-brand">
+    <span class="tb-mark" aria-hidden="true">§</span>
+    <span class="tb-name">Supplement Studio</span>
+  </div>
+  <div class="tb-mid">
+    <span class="tb-title">__TITLE__</span>
+    <button class="tb-search" id="searchOpenBtn" title="Search (⌘K)">
+      <span class="tb-search-hint">Search<span class="tb-search-more"> provisions and text</span></span>
+      <span class="key">⌘K</span>
+    </button>
+  </div>
+  <div class="tb-tools">
+    <button class="tool-btn" id="typeBtn" title="Text size and line width" aria-haspopup="dialog">Aa</button>
+    <button class="tool-btn" id="themeBtn" title="Switch theme">Dark</button>
+    <button class="tool-btn tb-notes" id="notesToggle" aria-expanded="false" aria-controls="rail">Notes</button>
+  </div>
+</header>
+
+<div class="app">
+  <aside class="toc" id="toc" aria-label="Table of contents">
+    <div class="toc-brand">
+      <div class="toc-eyebrow" id="tocEyebrow"></div>
+      <div class="toc-title" id="tocTitle">__TITLE__</div>
+      <div class="toc-sub" id="tocSub"></div>
+    </div>
+    <div class="toc-filter">
+      <input type="text" id="tocFilter" placeholder="Filter provisions" aria-label="Filter provisions" autocomplete="off" spellcheck="false"/>
+      <button class="toc-filter-clear" id="tocFilterClear" title="Clear filter" aria-label="Clear filter">×</button>
+    </div>
+    <nav class="toc-scroll" id="tocScroll"></nav>
+    <section class="toc-foot" aria-label="Your notes">
+      <div class="toc-foot-row"><span id="sbSections">–</span><span id="sbCounts">–</span></div>
+      <div class="toc-foot-actions">
+        <button class="mini-btn" id="exportBtn" title="Export highlights and notes (⌘S)">Export notes</button>
+        <button class="mini-btn" id="importBtn" title="Import highlights and notes (⌘O)">Import notes</button>
+      </div>
+      <button class="link-btn" id="aboutBtn" aria-haspopup="dialog" aria-expanded="false">About this file</button>
+    </section>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-bar">
+      <div class="crumb" id="crumb"><span class="crumb-active">…</span></div>
+      <div class="controls">
+        <span class="pill" id="progressPill" title="How far through the supplement you are">0%</span>
+      </div>
+    </div>
+    <div class="content" id="content">
+__CONTENT__
+    </div>
+  </main>
+
+  <div class="gutter" id="gutter" aria-hidden="true"></div>
+
+  <aside class="rail" id="rail" aria-label="Notes and highlights">
+    <div class="rail-head">
+      <span class="rail-title">Notes and marks</span>
+      <span class="rail-tools">
+        <button class="hop-btn" id="hopPrev" title="Previous annotation ( [ )">Prev</button>
+        <button class="hop-btn" id="hopNext" title="Next annotation ( ] )">Next</button>
+      </span>
+      <span class="rail-count" id="railCount">section</span>
+    </div>
+    <div class="rail-filters" id="railFilters">
+      <button class="rail-chip active" data-f="all" title="Everything in view, as a list">All</button>
+      <button class="rail-chip" data-f="notes" title="Note cards aligned to their text">Notes</button>
+      <button class="rail-chip" data-f="marks" title="Plain highlights in view, as a list">Marks</button>
+    </div>
+    <button class="rail-unplaced" id="orphanStatBtn" hidden title="Review highlights that could not be placed in the text">
+      <span><b id="orphanStat">0</b> <span id="orphanWord">unplaced highlights</span></span>
+      <span class="go">Review</span>
+    </button>
+    <div class="rail-cards" id="railCards"></div>
+    <div class="rail-empty" id="railEmpty">Nothing highlighted in view.<span>Select text to highlight it.</span></div>
+  </aside>
+</div>
+
+<!-- selection / highlight toolbar -->
+<div class="hl-toolbar" id="hlToolbar" role="toolbar">
+  <button class="cbtn yellow" data-c="yellow" title="Yellow"></button>
+  <button class="cbtn green" data-c="green" title="Green"></button>
+  <button class="cbtn blue" data-c="blue" title="Blue"></button>
+  <button class="cbtn purple" data-c="purple" title="Purple"></button>
+  <button class="cbtn orange" data-c="orange" title="Orange"></button>
+  <span class="sep"></span>
+  <button class="tbtn" id="noteBtn" title="Add or edit note">Note</button>
+  <button class="tbtn danger" id="delBtn" title="Delete highlight">Delete</button>
+  <button class="tbtn confirm" id="delConfirmBtn">Sure?</button>
+</div>
+
+<!-- search overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="Search the supplement" aria-label="Search the supplement" autocomplete="off" spellcheck="false"/>
+      <span class="search-count" id="searchCount"></span>
+      <button class="snav" id="searchPrev" title="Previous (⇧Enter)">Prev</button>
+      <button class="snav" id="searchNext" title="Next (Enter)">Next</button>
+      <button class="snav" id="searchClose" title="Close (Esc)">Close</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- cross-reference peek -->
+<div class="xref-peek" id="xrefPeek" role="dialog" aria-label="Provision preview">
+  <div class="peek-head">
+    <div class="peek-meta">
+      <span class="peek-num" id="peekNum"></span>
+      <span class="peek-cite" id="peekCite"></span>
+    </div>
+    <div class="peek-actions">
+      <button class="peek-go" id="peekGo">Open §</button>
+      <button class="peek-close" id="peekClose" title="Close (Esc)">Close</button>
+    </div>
+  </div>
+  <div class="peek-title" id="peekTitle"></div>
+  <div class="peek-body" id="peekBody"></div>
+</div>
+
+<!-- text settings -->
+<div class="type-pop" id="typePop" role="dialog" aria-label="Text settings">
+  <div class="tp-row">
+    <span class="tp-label">Text size</span>
+    <span class="tp-ctl">
+      <button class="tp-btn" id="fsMinus" title="Smaller text">−</button>
+      <b id="fsVal">17</b>
+      <button class="tp-btn" id="fsPlus" title="Larger text">+</button>
+    </span>
+  </div>
+  <div class="tp-row">
+    <span class="tp-label">Line width</span>
+    <span class="tp-ctl">
+      <button class="tp-btn" id="measureNormal">Normal</button>
+      <button class="tp-btn" id="measureWide">Wide</button>
+    </span>
+  </div>
+</div>
+
+<!-- about this file: where the build facts and annotation bookkeeping live -->
+<div class="about-pop" id="aboutPop" role="dialog" aria-label="About this file">
+  <div class="ap-head">About this file</div>
+  <dl class="ap-list">
+    <div><dt>Contents</dt><dd id="apContents">–</dd></div>
+    <div id="apUscRow"><dt>U.S. Code</dt><dd id="apUsc">–</dd></div>
+    <div id="apEcfrRow"><dt>eCFR</dt><dd id="apEcfr">–</dd></div>
+    <div><dt>Built</dt><dd id="apBuilt">–</dd></div>
+    <div><dt>Your notes</dt><dd><b id="bHl">0</b> highlights · <b id="bNotes">0</b> notes</dd></div>
+    <div><dt>Placed in text</dt><dd><span class="dot" id="anchorDot"></span><b id="anchorStat">0 of 0</b></dd></div>
+    <div id="apUnplacedRow"><dt>Not placed</dt><dd><b id="bOrphans">0</b><button class="link-btn" id="apReview">Review</button></dd></div>
+  </dl>
+  <p class="ap-foot">This file works offline and makes no network requests. Highlights and notes stay in this browser; use Export notes to keep a copy.</p>
+</div>
+
+<!-- unplaced-highlight triage -->
+<div class="orphan-overlay" id="orphanOverlay">
+  <div class="orphan-box">
+    <div class="orphan-head">
+      <span class="orphan-title">Unplaced highlights</span>
+      <span class="orphan-sub" id="orphanRemaining"></span>
+      <button class="snav" id="orphanClose" title="Close (Esc)">Close</button>
+    </div>
+    <div class="orphan-list" id="orphanList"></div>
+  </div>
+</div>
+
+<button class="return-pill" id="returnPill"><span class="rp-arrow">←</span> <span id="returnLabel"></span></button>
+
+<div class="scrim" id="scrim"></div>
+
+<svg class="leader-overlay" aria-hidden="true"><path class="leader-path" d=""></path></svg>
+<div class="toasts" id="toasts"></div>
+<input type="file" id="importFile" accept=".json,application/json" style="display:none"/>
+
+<script id="docMeta" type="application/json">__DOC_META__</script>
+<script id="tocData" type="application/json">__TOC__</script>
+<script id="seedData" type="application/json">__SEED__</script>
+<script id="orphanData" type="application/json">__ORPHANS__</script>
+<script>
+//__JS__
+</script>
+</body>
+</html>

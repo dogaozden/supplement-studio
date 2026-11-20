@@ -1,0 +1,114 @@
+/* Copied from builder/theme.css (source of truth). scripts/build_site.py refreshes this copy at package time. */
+
+/* Supplement Studio: design tokens.
+   Direction: a fine legal publisher crossed with a precise modern tool.
+   Paper and ink, one oxblood accent, hairline rules instead of boxes.
+   This file is the single token source. builder/app.css and
+   site/site.css draw every color, font, size and space from these
+   variables. scripts/build_site.py ships a copy at site/assets/theme.css.
+   Token names are fixed (see the design direction); values may be tuned. */
+
+:root {
+  /* paper and ink */
+  --paper:        #FBFAF6;   /* page background (warm white) */
+  --surface:      #FFFFFF;   /* inputs, dialogs, the PDF well's pages */
+  --well:         #EFEDE6;   /* behind PDF pages, secondary areas */
+  --ink:          #1A1916;   /* primary text */
+  --ink-2:        #45423B;   /* secondary text */
+  --ink-3:        #77736A;   /* tertiary text, captions, placeholders */
+
+  /* hairlines */
+  --rule:         #E2DED4;   /* hairlines */
+  --rule-strong:  #C9C4B8;   /* stronger dividers, input borders */
+
+  /* the one accent: oxblood */
+  --accent:       #8A2A1E;   /* primary action, selection marker, section signs */
+  --accent-ink:   #6E2016;   /* accent text on paper (hover, pressed) */
+  --accent-wash:  #F5ECE8;   /* selected-row background, subtle highlight */
+
+  /* feedback */
+  --ok:           #2E6A41;   /* verified, copied */
+  --warn:         #8F6410;   /* stale data, long links */
+  --danger:       #A3261A;   /* remove, errors */
+
+  /* focus and elevation (shadow only on true overlays) */
+  --focus:        0 0 0 2px var(--paper), 0 0 0 4px rgba(138, 42, 30, .45);
+  --shadow-pop:   0 12px 32px rgba(26, 25, 22, .14), 0 2px 6px rgba(26, 25, 22, .08);
+
+  /* type: Garamond for content and titles, system sans for small controls */
+  --serif:        "EB Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans:         -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --mono:         ui-monospace, "SF Mono", Menlo, monospace;   /* share-link field only */
+
+  --radius:       3px;
+
+  --step--1: 13px;
+  --step-0:  15px;
+  --step-1:  17px;
+  --step-2:  21px;
+  --step-3:  28px;
+  --step-4:  40px;
+  --step-5:  56px;
+
+  /* 4px grid */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  /* annotation hues (mirror the reader palette; keep in sync with
+     builder/reader/template/reader.css) */
+  --hi-yellow: #E9B824;  --hi-yellow-bg: #FFF6D6;
+  --hi-green:  #1FA971;  --hi-green-bg:  #DEF6EA;
+  --hi-orange: #E36F1E;  --hi-orange-bg: #FDE7D2;
+
+  /* ---- Legacy aliases ----
+     builder/app.css still uses the pre-redesign names. Each one now
+     resolves to the new palette so the studio keeps working until it is
+     restyled; delete them as app.css moves to the names above. */
+  --accent-hover: var(--accent-ink);
+  --accent-soft:  var(--accent-wash);
+  --chrome:       #F6F4EE;
+  --hover:        var(--well);
+  --muted:        var(--ink-3);
+  --muted-2:      #9A968B;
+  --line:         var(--rule);
+  --line-2:       #ECE9E1;
+  --danger-soft:  #F8E9E6;
+  --backdrop:     rgba(26, 25, 22, .35);
+  --font-serif:   var(--serif);
+  --font-sans:    var(--sans);
+  --font-mono:    var(--mono);
+  --fs-xs: 11px;
+  --fs-sm: 12.5px;
+  --fs-base: 14px;
+  --fs-md: 16px;
+  --fs-lg: 19px;
+  --fs-xl: 24px;
+  --fs-2xl: 34px;
+  --radius-sm:    var(--radius);
+  --shadow-sm:    0 1px 2px rgba(26, 25, 22, .06);
+  --shadow-md:    var(--shadow-pop);
+  --focus-ring:   0 0 0 3px rgba(138, 42, 30, .25);
+}
+
+/* Keyboard focus: the oxblood ring. The transparent outline keeps a
+   visible focus indicator in forced-colors / high-contrast mode. */
+:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: var(--focus);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

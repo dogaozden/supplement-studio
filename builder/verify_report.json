@@ -1,0 +1,218 @@
+{
+  "usc_release_point": "119-142",
+  "ecfr_date": "2026-11-12",
+  "corpus_generated_at": "2026-11-16T06:44:23Z",
+  "generated_at": "2026-11-16T06:44:29Z",
+  "checked": 1905,
+  "exact": 1884,
+  "whitespace_only": 21,
+  "heading_dash": 183,
+  "by_kind": {
+    "usc": {
+      "checked": 309,
+      "exact": 309
+    },
+    "ecfr": {
+      "checked": 1596,
+      "exact": 1575
+    }
+  },
+  "mismatches": [],
+  "whitespace_only_detail": [
+    {
+      "id": "r-210-3-15",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 0,
+        "corpus": "(a) -(b) [Reserved] (c) The",
+        "source": "(a)-(b) [Reserved] (c) The"
+      }
+    },
+    {
+      "id": "r-210-4-08",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 644,
+        "corpus": "(h) Income tax expense. (1) Disclosure shall be",
+        "source": "(h) Income tax expense.(1) Disclosure shall be"
+      }
+    },
+    {
+      "id": "r-210-9-03",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 193,
+        "corpus": "(3) unearned income. (a) -(d) [Reserved] (e) (1)",
+        "source": "(3) unearned income. (a)-(d) [Reserved] (e) (1)"
+      }
+    },
+    {
+      "id": "r-210-10-01",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 769,
+        "corpus": "with appropriate explanations. (4) -(5) [Reserved] (6) For",
+        "source": "with appropriate explanations. (4)-(5) [Reserved] (6) For"
+      }
+    },
+    {
+      "id": "r-229-201",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 534,
+        "corpus": "equity. (c) Dividends. (1) [Reserved] (2) Where registrants",
+        "source": "equity. (c) Dividends. (1)[Reserved] (2) Where registrants"
+      }
+    },
+    {
+      "id": "r-229-302",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 637,
+        "corpus": "federal securities laws. (c) Smaller reporting companies. A",
+        "source": "federal securities laws. (c)Smaller reporting companies. A"
+      }
+    },
+    {
+      "id": "r-229-305",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 5593,
+        "corpus": "millions) $US Functional Currency: Liabilities Long-Term Debt:",
+        "source": "millions) $US Functional Currency : Liabilities Long-Term Debt:"
+      }
+    },
+    {
+      "id": "r-229-512",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 2137,
+        "corpus": "fide offering thereof. (c) -(f) [Reserved] (g) Registration",
+        "source": "fide offering thereof. (c)-(f) [Reserved] (g) Registration"
+      }
+    },
+    {
+      "id": "r-229-601",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 5306,
+        "corpus": "must be filed. (11) -(12) [Reserved] (13) Annual",
+        "source": "must be filed. (11)-(12) [Reserved] (13) Annual"
+      }
+    },
+    {
+      "id": "r-229-801",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 0,
+        "corpus": "(a) -(c) [Reserved] (d) Guide",
+        "source": "(a)-(c) [Reserved] (d) Guide"
+      }
+    },
+    {
+      "id": "r-229-802",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 0,
+        "corpus": "(a) -(c) [Reserved] (d) Guide",
+        "source": "(a)-(c) [Reserved] (d) Guide"
+      }
+    },
+    {
+      "id": "r-229-1602",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 297,
+        "corpus": "to Paragraph (a) (4)Net Tangible Book Value",
+        "source": "to Paragraph (a) (4) Net Tangible Book Value"
+      }
+    },
+    {
+      "id": "r-232-101",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 2423,
+        "corpus": "the electronic filer: (1) -(9) [Reserved] (c) Documents",
+        "source": "the electronic filer: (1)-(9) [Reserved] (c) Documents"
+      }
+    },
+    {
+      "id": "r-232-311",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 226,
+        "corpus": "by this section. (d) -(f) [Reserved]",
+        "source": "by this section. (d)-(f) [Reserved]"
+      }
+    },
+    {
+      "id": "r-240-10A-3",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 2323,
+        "corpus": "U.S.C. 80a-4(2)); and (iii) Foreign governments (as defined",
+        "source": "U.S.C. 80a-4(2)); and (iii)Foreign governments (as defined"
+      }
+    },
+    {
+      "id": "r-240-13d-101",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 601,
+        "corpus": "of Schedule 13D). (7) -(11) [Reserved] (12) Check",
+        "source": "of Schedule 13D). (7)-(11) [Reserved] (12) Check"
+      }
+    },
+    {
+      "id": "r-240-13d-102",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 443,
+        "corpus": "place of organization. (5) -(9), (11) Aggregated Amount",
+        "source": "place of organization. (5)-(9), (11) Aggregated Amount"
+      }
+    },
+    {
+      "id": "r-240-14a-101",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 9591,
+        "corpus": "under this Item. (8) —(10) [Reserved] (11) Financial",
+        "source": "under this Item. (8)—(10) [Reserved] (11) Financial"
+      }
+    },
+    {
+      "id": "r-240-17a-3",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 5181,
+        "corpus": "compression, if any. (32) -(34) [Reserved] (35) For",
+        "source": "compression, if any. (32)-(34) [Reserved] (35) For"
+      }
+    },
+    {
+      "id": "r-242-606",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 1053,
+        "corpus": "Information on Order Routing. (A) Total shares routed;",
+        "source": "Information on Order Routing.(A) Total shares routed;"
+      }
+    },
+    {
+      "id": "r-275-205-1",
+      "ratio": 1.0,
+      "first_diff": {
+        "word_index": 290,
+        "corpus": "the dividend. Exhibit I[Method of computing the",
+        "source": "the dividend. Exhibit I [Method of computing the"
+      }
+    }
+  ],
+  "image_placeholders_in": [
+    "r-240-3a67-3",
+    "r-240-15Ga-1",
+    "r-275-205-1"
+  ],
+  "method": "Independent word-sequence comparison per provision. USC: section text minus its own num/heading, sourceCredit, notes, footnote notes and footnote markers (footnote bodies and headings compared separately), tables as cell text. eCFR: section text minus HEAD, CITA, SECAUTH, EDNOTE, XREF and digit-only SU/sup markers; NOTE/EXTRACT/CROSSREF/EXAMPLE/FTNT/HD*/captions/table cells included; HEAD compared separately; an em dash between an italic run-in heading and the next '(' marker reads as the heading's period (counted in heading_dash). Corpus text flattened as the reader shows it (xref anchors and superscript footnote markers removed, image placeholders skipped). Words compared in order."
+}

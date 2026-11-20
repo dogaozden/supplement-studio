@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Open book glyph, single indigo (--accent from theme.css). -->
+  <g fill="none" stroke="#5B5BD6" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8.5C13.5 6.6 9.8 6 6 6v18c3.8 0 7.5.6 10 2.5 2.5-1.9 6.2-2.5 10-2.5V6c-3.8 0-7.5.6-10 2.5z"/>
+    <path d="M16 8.5v18"/>
+  </g>
+</svg>

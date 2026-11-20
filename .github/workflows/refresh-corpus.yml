@@ -1,0 +1,104 @@
+name: refresh-corpus
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Monday 06:00 UTC
+  workflow_dispatch: {}
+
+concurrency:
+  group: refresh-corpus
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      # Node is required (not optional) here: the share-codec and renderer
+      # parity tests skip silently when node is missing, and this workflow
+      # exists precisely to catch corpus changes that break the renderer.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r builder/build/requirements-dev.txt
+      # check_releases finds the newest *downloadable* Title 15 release point
+      # (OLRC sometimes lists one whose zip 404s; it then falls back to the
+      # newest prior one that downloads and says so in usc_release_note) and
+      # the newest eCFR Title 17 date. The result goes to release.json, which
+      # later steps read with python, so nothing from the network is ever
+      # interpolated into a shell command.
+      - id: check
+        run: |
+          python -m builder.build.check_releases > "$RUNNER_TEMP/release.json"
+          cat "$RUNNER_TEMP/release.json"
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          r = json.load(open(os.environ["RUNNER_TEMP"] + "/release.json"))
+          print("changed=" + ("true" if r["changed"] else "false"))
+          PY
+      - name: Download new USLM and rebuild
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          read -r ZIP_URL ED < <(python -c "import json,os; r=json.load(open(os.environ['RUNNER_TEMP']+'/release.json')); print(r['usc_zip_url'], r['ecfr_date'])")
+          # -f: fail fast on an HTTP error instead of unzipping an error page;
+          # -o: overwrite the committed usc15.xml (unzip otherwise prompts
+          # and exits non-zero in CI, breaking the weekly refresh)
+          curl -fsSL "$ZIP_URL" -o "$RUNNER_TEMP/title15.zip"
+          unzip -oj "$RUNNER_TEMP/title15.zip" usc15.xml -d uscode_xml/
+          # eCFR needs Accept-Encoding: gzip (the build's HTTP session sends it);
+          # the raw XML it fetches is cached for the verify step below
+          python -m builder.build.build_corpus --ecfr-date "$ED" --release-info "$RUNNER_TEMP/release.json"
+      - name: Verify every provision against the source XML
+        if: steps.check.outputs.changed == 'true'
+        # fails the run (so no PR is opened) on any non-whitespace mismatch;
+        # writes builder/verify_report.json, which the PR carries
+        run: python -m builder.build.verify_corpus --no-fetch
+      - name: Run tests
+        if: steps.check.outputs.changed == 'true'
+        # --ignore: the e2e modules import playwright.sync_api and PIL at
+        # collection time; pillow isn't installed here and the e2e suite
+        # is out of scope for this gate anyway.
+        run: pytest builder/tests -v -m "not e2e" --ignore=builder/tests/e2e
+      - name: Package site against the new corpus
+        if: steps.check.outputs.changed == 'true'
+        run: python3 scripts/build_site.py
+      - name: Full-corpus renderer parity (Python vs JS, every provision)
+        if: steps.check.outputs.changed == 'true'
+        env:
+          PARITY_FULL: "1"
+        run: pytest builder/tests/test_reader_parity.py -v
+      - name: Describe the refresh
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          python - <<'PY' > "$RUNNER_TEMP/pr-body.md"
+          import json, os
+          r = json.load(open(os.environ["RUNNER_TEMP"] + "/release.json"))
+          v = json.load(open("builder/verify_report.json"))
+          print("Auto-generated corpus refresh.\n")
+          print(f"- USC release point: {r['usc_release_point']} ({r['usc_release_label']})")
+          if r["usc_release_note"]:
+              print(f"- Release note: {r['usc_release_note']}")
+          print(f"- eCFR Title 17 as of: {r['ecfr_date']}")
+          print(f"- Verification: {v['exact']} of {v['checked']} provisions word-for-word exact, "
+                f"{v['whitespace_only']} whitespace-only, {len(v['mismatches'])} mismatched")
+          PY
+      - name: Open PR
+        if: steps.check.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: corpus-refresh
+          title: "chore: refresh corpus (USC + eCFR)"
+          body-path: ${{ runner.temp }}/pr-body.md
+          labels: corpus-refresh
+          commit-message: "chore: refresh corpus"
+          add-paths: |
+            uscode_xml/usc15.xml
+            builder/corpus.json
+            builder/build_manifest.json
+            builder/verify_report.json

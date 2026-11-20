@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Product name and tagline are hardcoded copies of PRODUCT in
+  builder/config.js (the source of truth). If the product is renamed
+  there, update the strings (and <title> / OG tags) here.
+
+  The double-brace words in the text (release point, eCFR date,
+  provision count, currency line) are filled by scripts/build_site.py
+  from builder/corpus.json when it packages deploy/. Opening this file
+  directly shows them raw; preview the built page instead
+  (python3 scripts/build_site.py && python3 -m http.server -d deploy).
+-->
+<title>Supplement Studio: build a statutory supplement from the official U.S. Code and eCFR</title>
+<meta name="description" content="No one should pay $250 for public law. Pick the statutes and rules you need (Securities Act § 5, Rule 10b-5, Regulation D) and download your own book-quality statutory supplement, built from the official U.S. Code and eCFR. Free, no accounts.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Supplement Studio">
+<meta property="og:title" content="No one should pay $250 for public law.">
+<meta property="og:description" content="Build a statutory supplement from the official U.S. Code and eCFR and download a book-quality PDF. Free, no accounts.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#FBFAF6">
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preload" href="./assets/fonts/EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/EBGaramond-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/EBGaramond-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+<link rel="stylesheet" href="./assets/theme.css">
+<link rel="stylesheet" href="./site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <a class="wordmark" href="./"><span class="sect" aria-hidden="true">§</span>Supplement Studio</a>
+    <nav class="masthead-nav" aria-label="Site">
+      <a href="#how">How it works</a>
+      <a href="#book">The book</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#faq">Questions</a>
+      <a class="btn btn-quiet" href="./app/">Open the studio</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================ hero ================================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Statutory supplements, built to order</p>
+        <h1 id="hero-title">No one should pay <span class="figure">$250</span> for <em>public&nbsp;law.</em></h1>
+        <p class="lede">Pick the statutes and rules your course uses, from Securities Act §&nbsp;5 to Rule&nbsp;10b-5 and Regulation&nbsp;D, and download your own book-quality supplement, built from the official U.S. Code and eCFR. It is free, and there are no accounts.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="./app/">Open the studio</a>
+          <a class="sample-link" href="./samples/sample-supplement.pdf">See a sample: Securities Regulation, Fall&nbsp;2027 (PDF)</a>
+        </div>
+      </div>
+
+      <figure class="hero-art">
+        <img class="page-detail" src="./assets/hero-detail.png" width="1280" height="1010"
+             alt="Detail of a typeset page from the sample supplement: Securities Act § 4, Exempted transactions (15 U.S.C. § 77d), with hanging subsection numbers (a), (1), (2), (3)(A)–(C) and live cross-reference links." fetchpriority="high">
+        <figcaption>From the sample supplement<span class="at-size">, at actual size</span>: <span class="lin">Securities Act § 4</span> (15 U.S.C. § 77d).</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ § 1 how it works ============================ -->
+  <section class="part" id="how" aria-labelledby="how-title">
+    <div class="wrap part-grid">
+      <div class="part-head">
+        <h2 id="how-title"><span class="part-no"><span class="sect" aria-hidden="true">§</span>&thinsp;1</span>How it works</h2>
+        <p class="deck">Three steps, and no account.</p>
+      </div>
+      <div class="part-body">
+        <ol class="steps">
+          <li>
+            <span class="step-no" aria-hidden="true">1</span>
+            <div>
+              <h3>Choose provisions.</h3>
+              <p>Search by citation, or add a whole act, chapter, or regulation in one click.</p>
+              <ul class="cites" aria-label="Examples of how provisions are listed">
+                <li><span class="cite-short"><span class="sect">§</span>&nbsp;5</span><span class="cite-full">15&nbsp;U.S.C. §&nbsp;77e</span></li>
+                <li><span class="cite-short">Rule&nbsp;10b-5</span><span class="cite-full">17&nbsp;C.F.R. §&nbsp;240.10b-5</span></li>
+                <li><span class="cite-short">Item&nbsp;404</span><span class="cite-full">17&nbsp;C.F.R. §&nbsp;229.404</span></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">2</span>
+            <div>
+              <h3>Arrange and title the parts.</h3>
+              <p>Put the provisions in the order you teach them. Name each part, and put your course, term, and name on the cover.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">3</span>
+            <div>
+              <h3>Download the PDF.</h3>
+              <p>The book has clickable contents, PDF bookmarks, and cross-references that link from one provision to another. Print it, bind it, or post it to the course site.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="aside"><span class="label">For students</span> An offline reader they can highlight and annotate. <a href="./samples/sample-reader.html">See a sample reader.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================== § 2 what's in the book ========================== -->
+  <section class="part" id="book" aria-labelledby="book-title">
+    <div class="wrap part-grid">
+      <div class="part-head">
+        <h2 id="book-title"><span class="part-no"><span class="sect" aria-hidden="true">§</span>&thinsp;2</span>What’s in the book</h2>
+        <p class="deck">Typeset as a book, from the official text.</p>
+      </div>
+      <div class="part-body">
+        <dl class="spec">
+          <div>
+            <dt>Text</dt>
+            <dd>The official text, from <a href="https://uscode.house.gov">uscode.house.gov</a> and <a href="https://www.ecfr.gov">ecfr.gov</a>. Nothing is paraphrased or summarized.</dd>
+          </div>
+          <div>
+            <dt>Verified</dt>
+            <dd>Checked word for word against the source when the data is built.</dd>
+          </div>
+          <div>
+            <dt>Currency</dt>
+            <dd>Printed on the cover. Today it reads: <span class="lin">{{CURRENCY}}</span></dd>
+          </div>
+          <div>
+            <dt>Contents</dt>
+            <dd>A clickable table of contents, and PDF bookmarks for every part, act, and section.</dd>
+          </div>
+          <div>
+            <dt>Cross-references</dt>
+            <dd>Live links between the provisions in your book. A reference to something you left out links to the official source.</dd>
+          </div>
+          <div>
+            <dt>Table of Sections</dt>
+            <dd>At the back: every section in the book, by citation, with its page.</dd>
+          </div>
+          <div>
+            <dt>Running heads</dt>
+            <dd>The act or part, and the section, at the top of each page.</dd>
+          </div>
+          <div>
+            <dt>Trim</dt>
+            <dd>US Letter, 7&thinsp;×&thinsp;10 in., or 6&thinsp;×&thinsp;9 in.</dd>
+          </div>
+          <div>
+            <dt>Numbering</dt>
+            <dd>The way lawyers cite them: <span class="lin">Securities Act §&nbsp;11</span>, <span class="lin">Exchange Act §&nbsp;10</span>, <span class="lin">Rule&nbsp;10b-5</span>, with <span class="lin">15&nbsp;U.S.C. §&nbsp;77k</span> in small type beside each. Contents, headings, running heads and cross-references all use the Act’s numbering. Prefer the U.S. Code numbers first? That is one setting.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ § 3 what's covered ============================ -->
+  <section class="part" id="coverage" aria-labelledby="coverage-title">
+    <div class="wrap part-grid">
+      <div class="part-head">
+        <h2 id="coverage-title"><span class="part-no"><span class="sect" aria-hidden="true">§</span>&thinsp;3</span>What’s covered</h2>
+        <p class="deck">Federal securities law first. Other courses are planned.</p>
+      </div>
+      <div class="part-body">
+        <h3 class="list-title">Statutes <span class="list-cite"><span class="fig">15</span> U.S.C.</span></h3>
+        <ul class="catalog">
+{{STATUTE_LIST}}
+        </ul>
+
+        <h3 class="list-title">Regulations <span class="list-cite"><span class="fig">17</span> C.F.R.</span></h3>
+        <ul class="catalog">
+{{REGULATION_LIST}}
+        </ul>
+
+        <p class="currency"><span class="lin">{{PROVISION_COUNT}}</span> provisions in all. <span class="lin">{{CURRENCY}}</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ § 4 faq ================================ -->
+  <section class="part" id="faq" aria-labelledby="faq-title">
+    <div class="wrap part-grid">
+      <div class="part-head">
+        <h2 id="faq-title"><span class="part-no"><span class="sect" aria-hidden="true">§</span>&thinsp;4</span>Questions</h2>
+        <p class="deck">Short answers.</p>
+      </div>
+      <div class="part-body">
+        <dl class="faq">
+          <div>
+            <dt>Is it free? Is it legal?</dt>
+            <dd>Both. Statutes and regulations are works of the United States government and are in the public domain (<span class="lin">17&nbsp;U.S.C. §&nbsp;105</span>). The studio costs nothing and has no accounts. Commercial publishers’ annotations and headnotes are theirs, and none are used here.</dd>
+          </div>
+          <div>
+            <dt>How current is the text?</dt>
+            <dd>Every supplement prints the release of the U.S. Code and the date of the eCFR it was built from. Today that is U.S. Code release point <span class="lin">{{USC_RELEASE}}</span> and the eCFR as of {{ECFR_DATE}}. Open a saved link later and the same selection is rebuilt from the newer text.</dd>
+          </div>
+          <div>
+            <dt>Which browser should I use?</dt>
+            <dd>Any current browser, on a computer or a phone. It is tested in Chrome and Safari.</dd>
+          </div>
+          <div>
+            <dt>Does anything leave my computer?</dt>
+            <dd>No. The studio runs in your browser, and your supplement is built there. A share link carries only the outline: the provisions you chose, their order, and the titles and cover text you typed. That outline sits in the part of the link after the <span class="mono">#</span>, which browsers do not send to any server.</dd>
+          </div>
+          <div>
+            <dt>Can I build a supplement for another course?</dt>
+            <dd>Not yet. Federal securities law is what is covered today (see <span class="lin">§&nbsp;3</span> above). Other bodies of law are planned.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================ colophon ================================ -->
+<footer class="colophon">
+  <div class="wrap colophon-grid">
+    <div class="colophon-brand">
+      <p class="wordmark"><span class="sect" aria-hidden="true">§</span>Supplement Studio</p>
+      <p class="colophon-line">Free statutory supplements for law courses.</p>
+      <a class="btn btn-primary" href="./app/">Open the studio</a>
+    </div>
+    <dl class="colophon-spec">
+      <div>
+        <dt>Sources</dt>
+        <dd>The United States Code, from the Office of the Law Revision Counsel (<a href="https://uscode.house.gov">uscode.house.gov</a>), and the Electronic Code of Federal Regulations (<a href="https://www.ecfr.gov">ecfr.gov</a>). Works of the United States government, in the public domain.</dd>
+      </div>
+      <div>
+        <dt>Currency</dt>
+        <dd><span class="lin">{{CURRENCY}}</span></dd>
+      </div>
+      <div>
+        <dt>Type</dt>
+        <dd>Set in EB Garamond, used under the SIL Open Font License.</dd>
+      </div>
+    </dl>
+  </div>
+</footer>
+
+</body>
+</html>

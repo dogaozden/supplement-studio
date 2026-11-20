@@ -1,0 +1,114 @@
+{
+  "id": "securities",
+  "uslm": {
+    "title": 15,
+    "xml_path": "uscode_xml/usc15.xml",
+    "xml_url": "https://uscode.house.gov/download/releasepoints/us/pl/{congress}/{rp_suffix}/xml_usc15@{congress}-{rp_suffix}.zip",
+    "release_note": "The RP suffix may chain one or more notNN exclusions (e.g. 102not101). Discover the newest DOWNLOADABLE release point with `python -m builder.build.check_releases` (OLRC sometimes lists a release point whose zip 404s; the checker falls back to the newest prior one that downloads and says so in usc_release_note), which prints the exact zip URL as usc_zip_url; download that zip for this title and extract the title XML to xml_path before building.",
+    "target_chapters": ["2A", "2B", "2B–1", "2D", "98"],
+    "cite_prefix": "15 U.S.C.",
+    "act_names": {
+      "15/2A": "Securities Act of 1933",
+      "15/2B": "Securities Exchange Act of 1934",
+      "15/2B–1": "Securities Investor Protection Act of 1970",
+      "15/2D": "Investment Company Act of 1940",
+      "15/98": "Sarbanes-Oxley Act of 2002"
+    },
+    "act_meta": {
+      "15/2A": {"original_name_short": "Securities Act", "share_key": "SecuritiesAct", "order": 1, "original_statute_chapters": ["38"]},
+      "15/2B": {"original_name_short": "Exchange Act", "share_key": "ExchangeAct", "order": 2, "original_statute_chapters": ["404"]},
+      "15/98": {"original_name_short": "Sarbanes-Oxley Act", "share_key": "SOX", "order": 3, "original_pub_laws": ["107-204"]},
+      "15/2D": {"original_name_short": "Investment Company Act", "share_key": "InvestmentCompanyAct", "order": 4, "original_statute_chapters": ["686"]},
+      "15/2B–1": {"original_name_short": "SIPA", "share_key": "SIPA", "order": 7, "original_pub_laws": ["91-598"]}
+    },
+    "split_acts": [
+      {
+        "id": "act-ch2D-schII", "usc_chapter": "15/2D", "subchapter": "schII",
+        "short_title": "Investment Advisers Act of 1940", "original_name_short": "Investment Advisers Act", "share_key": "InvestmentAdvisersAct",
+        "order": 5, "original_statute_chapters": ["686"]
+      },
+      {
+        "id": "act-ch2A-schIII", "usc_chapter": "15/2A", "subchapter": "schIII",
+        "short_title": "Trust Indenture Act of 1939", "original_name_short": "Trust Indenture Act", "share_key": "TrustIndentureAct",
+        "order": 6, "original_statute_chapters": ["38"]
+      },
+      {
+        "id": "act-ch2A-schII", "usc_chapter": "15/2A", "subchapter": "schII",
+        "short_title": "Corporation of Foreign Bondholders Act, 1933", "original_name_short": "Foreign Bondholders Act", "share_key": "ForeignBondholdersAct",
+        "order": 8, "original_statute_chapters": ["38"]
+      }
+    ]
+  },
+  "ecfr": {
+    "title": 17,
+    "chapter": "II",
+    "parts": [210, 227, 229, 230, 232, 239, 240, 242, 243, 244, 249, 270, 275],
+    "cite_prefix": "17 C.F.R.",
+    "common_names": {},
+    "group_ends": {
+      "230": {"Regulation E": "230.610a"},
+      "240": {"Regulation 13D-G": "240.13d-102"}
+    },
+    "name_style": {
+      "210": {"kind": "rule", "of": "Regulation S-X"},
+      "227": {"kind": "rule", "of": "Regulation Crowdfunding"},
+      "229": {"kind": "item", "of": "Regulation S-K", "use_group": true},
+      "230": {"kind": "rule"},
+      "232": {"kind": "rule", "of": "Regulation S-T"},
+      "239": {"kind": "form"},
+      "240": {"kind": "rule", "schedules": true},
+      "242": {"kind": "rule", "use_group": true},
+      "243": {"kind": "rule", "of": "Regulation FD"},
+      "244": {"kind": "rule", "of": "Regulation G"},
+      "249": {"kind": "form"},
+      "270": {"kind": "rule"},
+      "275": {"kind": "rule"}
+    },
+    "part_short_titles": {
+      "210": "Regulation S-X",
+      "227": "Regulation Crowdfunding",
+      "229": "Regulation S-K",
+      "230": "Rules under the Securities Act of 1933",
+      "232": "Regulation S-T",
+      "239": "Rules prescribing Securities Act forms",
+      "240": "Rules under the Securities Exchange Act of 1934",
+      "242": "Regulations M, SHO, ATS, AC, NMS, SE, and SBSR",
+      "243": "Regulation FD",
+      "244": "Regulation G",
+      "249": "Rules prescribing Exchange Act forms",
+      "270": "Rules under the Investment Company Act of 1940",
+      "275": "Rules under the Investment Advisers Act of 1940"
+    },
+    "aliases": {
+      "230.506": ["Reg D"],
+      "230.144A": ["144A"],
+      "229.303": ["MD&A", "Management's discussion and analysis"],
+      "229.402": ["Executive compensation"],
+      "240.10b-5": ["10b-5"]
+    },
+    "acronyms": ["SEC", "SHO", "ATS", "AC", "NMS", "SE", "SBSR", "SCI", "FD", "AB", "U.S."],
+    "authority_map": {
+      "227": "act-ch2A",
+      "230": "act-ch2A",
+      "239": "act-ch2A",
+      "240": "act-ch2B",
+      "242": "act-ch2B",
+      "243": "act-ch2B",
+      "244": "act-ch2B",
+      "249": "act-ch2B",
+      "270": "act-ch2D",
+      "275": "act-ch2D-schII"
+    }
+  },
+  "meta": {
+    "id": "securities",
+    "label": "Federal Securities Laws",
+    "defaultTitle": "Federal Securities Laws — Statutory Supplement",
+    "uscCitePrefix": "15 U.S.C.",
+    "cfrCitePrefix": "17 C.F.R.",
+    "modes": {
+      "codified": "Codified (U.S.C.)",
+      "original": "Original acts"
+    }
+  }
+}

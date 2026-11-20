@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- Hand-trimmed from live eCFR XML (Title 17, 2026-10-29): how eCFR marks the
+     fifth and sixth levels of the C.F.R. paragraph hierarchy with italics
+     ((a) / (1) / (i) / (A) / (<I>1</I>) / (<I>i</I>)), the three ways the italics
+     are written, a heading ended by an em dash ("(c) <I>Heading</I>—(1) ..."),
+     and the neighbours that must NOT change (unmarked dash paragraph, plain lead-in). -->
+<DIV5 N="230" TYPE="PART">
+<HEAD>PART 230&#x2014;GENERAL RULES AND REGULATIONS, SECURITIES ACT OF 1933
+</HEAD>
+<DIV8 N="230.135" TYPE="SECTION">
+<HEAD>&#xA7; 230.135 Notice of proposed registered offerings.</HEAD>
+<P>(a) <I>When notice is not an offer.</I> For purposes of section 5 of the Act:</P>
+<P>(2) <I>Limited notice content.</I> The notice includes no more than the following information:</P>
+<P>(vii) Any statements or legends required by the laws of any state; and</P>
+<P>(viii) In the following offerings, the notice may contain additional information, as follows:</P>
+<P>(A) <I>Rights offering.</I> In a rights offering to existing security holders:</P>
+<P>(<I>1</I>) The class of security holders eligible to subscribe;</P>
+<P>(<I>2</I>) The subscription ratio and expected subscription price;</P>
+<P>(B) <I>Offering to employees.</I> In an offering to employees of the issuer:</P>
+<P>(<I>1</I>) The name of the employer;</P>
+<P>(<I>2</I>) The class of employees being offered the securities.</P>
+<P>(b) <I>Corrections of misstatements about the offering.</I> A person that publishes a notice may correct it.</P>
+</DIV8>
+<DIV8 N="230.136" TYPE="SECTION">
+<HEAD>&#xA7; 230.136 Italic levels in every spelling.</HEAD>
+<P>(c) <I>Margin requirements</I>&#x2014;(1) <I>Dealers</I>&#x2014;(i) <I>Calculation required.</I> A dealer must calculate:</P>
+<P>(A) The current exposure; and</P>
+<P>(B) The initial margin amount.</P>
+<P>(ii) <I>Account equity requirements.</I> A dealer must act as follows:</P>
+<P>(A)(<I>1</I>) Collect collateral equal to the current exposure; or</P>
+<P>(<I>2)</I> Deliver collateral equal to the current exposure.</P>
+<P>(B) Collect collateral equal to the initial margin amount.</P>
+<P>(2) <I>Participants.</I> A participant must act as follows:</P>
+<P>(d) <I>Servicing criteria</I>&#x2014;(1) <I>General.</I> The servicer shall comply.</P>
+<P>(2) <I>Reports.</I> The servicer shall report:</P>
+<P>(i) The trust;</P>
+<P>(A) The assets;</P>
+<P><I>(1)</I> An entity under audit, or</P>
+<P><I>(2)</I> An investment adviser.</P>
+<P>(<I>i</I>) The entity is material to the adviser;</P>
+<P>(<I>ii</I>) The entity provides services.</P>
+<P>(<I>A</I>) Administrative services;</P>
+<P>(<I>B</I>) Custodial services.</P>
+<P>(B) The liabilities.</P>
+<P>(3) A paragraph after the items is the next second-level paragraph.</P>
+<P>(e) <I>Smaller reporting companies</I>&#x2014;<I>General</I>&#x2014;(1) <I>All compensation covered.</I> This section applies.</P>
+<P>(f) <I>Format&#x2014;Schedules&#x2014;Generally.</I> The part of the file with the data.</P>
+<P><I>(g) Layout.</I> The layout is as follows.</P>
+</DIV8>
+<DIV8 N="230.137" TYPE="SECTION">
+<HEAD>&#xA7; 230.137 What must stay as it is.</HEAD>
+<P>(a) Conditions&#x2014;(1) <I>Fees.</I> A plain lead-in is the sentence the list continues, not a heading.</P>
+<P><I>Trading facility</I>&#x2014;(1) <I>In general.</I> An unmarked paragraph is kept whole.</P>
+<P>(2) <I>Reserved.</I> The next paragraph is second-level at root.</P>
+<P>(8)&#x2014;(10) [Reserved]</P>
+</DIV8>
+<DIV8 N="230.138" TYPE="SECTION">
+<HEAD>&#xA7; 230.138 Letters and numerals that look alike.</HEAD>
+<P>(g) The letter before.</P>
+<P>(h) A paragraph that leads into numbered paragraphs:</P>
+<P>(1) A numbered paragraph that leads into numerals:</P>
+<P>(i) The first numeral;</P>
+<P>(ii) The second numeral.</P>
+<P>(i) <I>The next letter.</I> A letter with paragraphs of its own:</P>
+<P>(1) Its first paragraph.</P>
+<P>(j) The letter after.</P>
+<P>(k) A letter with no children.</P>
+<P>(l) Another.</P>
+<P>(u) A letter before v.</P>
+<P>(v) The letter v, not a numeral.</P>
+<P>(w) A letter before x.</P>
+<P>(x) The letter x.</P>
+<P>(hh) A doubled letter.</P>
+<P>(ii) Not the numeral two.</P>
+<P>(jj) Another doubled letter.</P>
+</DIV8>
+<DIV8 N="230.139" TYPE="SECTION">
+<HEAD>&#xA7; 230.139 Numeral lists run past xx.</HEAD>
+<P>(a) A long list:</P>
+<P>(1) These are included:</P>
+<P>(xix) Nineteen;</P>
+<P>(xx) Twenty;</P>
+<P>(xxi) Twenty-one;</P>
+<P>(xxxviii) Thirty-eight.</P>
+<P>(2) The next paragraph.</P>
+</DIV8>
+</DIV5>

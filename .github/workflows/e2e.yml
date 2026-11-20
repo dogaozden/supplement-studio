@@ -1,0 +1,59 @@
+name: e2e
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "30 4 * * 1"   # Monday 04:30 UTC, before refresh-corpus (06:00)
+  pull_request:
+    types: [labeled]
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    # On pull requests, run when "run-e2e" is applied — or "corpus-refresh"
+    # (the label refresh-corpus.yml puts on its auto-PRs). Note: PRs opened
+    # with the default GITHUB_TOKEN never self-trigger workflows, so a human
+    # applying/re-applying either label is what actually fires this.
+    if: github.event_name != 'pull_request' || contains(fromJSON('["run-e2e", "corpus-refresh"]'), github.event.label.name)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # requirements-dev pins pytest/playwright/pdfplumber/lxml/requests;
+      # pillow is added for the visual-diff suite (not in requirements-dev;
+      # pinned to the version the darwin goldens were generated with).
+      - name: Install test dependencies
+        run: pip install -r builder/build/requirements-dev.txt pillow==11.3.0 pypdf==5.9.0
+      - name: Install Chromium
+        run: playwright install --with-deps chromium
+      - name: Full suite (e2e + full-corpus renderer parity)
+        # NOTE: the PDF visual goldens are platform-keyed and only darwin
+        # goldens exist today (builder/tests/e2e/goldens/*-darwin.png), so
+        # test_pdf_visual SKIPS on this linux runner until linux goldens
+        # are generated with REGEN_GOLDENS=1 on linux and committed.
+        shell: bash   # explicit shell => -o pipefail, so tee can't mask a failure
+        env:
+          PARITY_FULL: "1"
+        run: pytest builder/tests -q 2>&1 | tee /tmp/pytest-e2e.log
+      - name: Upload failure artifacts (pytest log + tmp outputs)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-failure-${{ github.run_id }}
+          path: |
+            /tmp/pytest-e2e.log
+            /tmp/pytest-of-*/
+          if-no-files-found: warn
+          retention-days: 14

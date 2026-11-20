@@ -1,0 +1,25 @@
+# virtualenvs
+.venv/
+node_modules/
+
+builder/__pycache__/
+builder/**/__pycache__/
+builder/.venv/
+builder/.pytest_cache/
+builder/tests/__pycache__/
+builder/tests/.pytest_cache/
+
+# packaged static tree (build artifact of scripts/build_site.py, never committed)
+deploy/
+
+# agent worktrees + orchestration scratch (never committed)
+.worktrees/
+.superpowers/
+
+# agent worktrees created by Claude Code (never committed)
+.claude/worktrees/
+
+# secrets and OS junk
+.env
+.DS_Store
+pipeline/**/__pycache__/

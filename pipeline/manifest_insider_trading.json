@@ -1,0 +1,40 @@
+{
+ "name": "insider-trading-v1",
+ "title": "Insider Trading",
+ "subtitle": "'34 Act antifraud core + SEC rules",
+ "edition": "Sample edition",
+ "groups": [
+  {
+   "label": "Securities Exchange Act of 1934",
+   "sublabel": "15 U.S.C. § 78a et seq.",
+   "kind": "usc",
+   "items": [
+    {"corpus_id": "s-78i", "old_id": "", "display": "§ 9"},
+    {"corpus_id": "s-78j", "old_id": "", "display": "§ 10"},
+    {"corpus_id": "s-78m", "old_id": "", "display": "§ 13"},
+    {"corpus_id": "s-78p", "old_id": "", "display": "§ 16"},
+    {"corpus_id": "s-78t", "old_id": "", "display": "§ 20"},
+    {"corpus_id": "s-78t–1", "old_id": "", "display": "§ 20A"},
+    {"corpus_id": "s-78u–1", "old_id": "", "display": "§ 21A"}
+   ]
+  },
+  {
+   "label": "Exchange Act Rules",
+   "sublabel": "17 C.F.R. Part 240",
+   "kind": "cfr",
+   "items": [
+    {"subhead": "Manipulative and Deceptive Devices"},
+    {"corpus_id": "r-240-10b-5", "old_id": "", "display": "Rule 10b-5"},
+    {"corpus_id": "r-240-10b5-1", "old_id": "", "display": "Rule 10b5-1"},
+    {"corpus_id": "r-240-10b5-2", "old_id": "", "display": "Rule 10b5-2"},
+    {"subhead": "Tender Offers"},
+    {"corpus_id": "r-240-14e-3", "old_id": "", "display": "Rule 14e-3"},
+    {"subhead": "Section 16 Reporting"},
+    {"corpus_id": "r-240-16a-1", "old_id": "", "display": "Rule 16a-1"},
+    {"corpus_id": "r-240-16a-2", "old_id": "", "display": "Rule 16a-2"},
+    {"corpus_id": "r-240-16b-3", "old_id": "", "display": "Rule 16b-3"}
+   ]
+  }
+ ],
+ "unmapped_legacy_ids": []
+}

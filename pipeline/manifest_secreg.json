@@ -1,0 +1,1933 @@
+{
+ "name": "secreg-2024-25",
+ "title": "Federal Securities Laws",
+ "subtitle": "selected statutes, rules, forms",
+ "edition": "2024–25 scope · current text",
+ "groups": [
+  {
+   "label": "Securities Act of 1933",
+   "sublabel": "15 U.S.C. § 77a et seq.",
+   "kind": "usc",
+   "items": [
+    {
+     "corpus_id": "s-77a",
+     "old_id": "sec-1",
+     "display": "§ 1"
+    },
+    {
+     "corpus_id": "s-77b",
+     "old_id": "sec-2",
+     "display": "§ 2"
+    },
+    {
+     "corpus_id": "s-77b–1",
+     "old_id": "sec-2a",
+     "display": "§ 2A"
+    },
+    {
+     "corpus_id": "s-77c",
+     "old_id": "sec-3",
+     "display": "§ 3"
+    },
+    {
+     "corpus_id": "s-77d",
+     "old_id": "sec-4",
+     "display": "§ 4"
+    },
+    {
+     "corpus_id": "s-77d–1",
+     "old_id": "sec-4a",
+     "display": "§ 4A"
+    },
+    {
+     "corpus_id": "s-77e",
+     "old_id": "sec-5",
+     "display": "§ 5"
+    },
+    {
+     "corpus_id": "s-77f",
+     "old_id": "sec-6",
+     "display": "§ 6"
+    },
+    {
+     "corpus_id": "s-77g",
+     "old_id": "sec-7",
+     "display": "§ 7"
+    },
+    {
+     "corpus_id": "s-77h",
+     "old_id": "sec-8",
+     "display": "§ 8"
+    },
+    {
+     "corpus_id": "s-77h–1",
+     "old_id": "sec-8a",
+     "display": "§ 8A"
+    },
+    {
+     "corpus_id": "s-77i",
+     "old_id": "sec-9",
+     "display": "§ 9"
+    },
+    {
+     "corpus_id": "s-77j",
+     "old_id": "sec-10",
+     "display": "§ 10"
+    },
+    {
+     "corpus_id": "s-77k",
+     "old_id": "sec-11",
+     "display": "§ 11"
+    },
+    {
+     "corpus_id": "s-77l",
+     "old_id": "sec-12",
+     "display": "§ 12"
+    },
+    {
+     "corpus_id": "s-77m",
+     "old_id": "sec-13",
+     "display": "§ 13"
+    },
+    {
+     "corpus_id": "s-77n",
+     "old_id": "sec-14",
+     "display": "§ 14"
+    },
+    {
+     "corpus_id": "s-77o",
+     "old_id": "sec-15",
+     "display": "§ 15"
+    },
+    {
+     "corpus_id": "s-77p",
+     "old_id": "sec-16",
+     "display": "§ 16"
+    },
+    {
+     "corpus_id": "s-77q",
+     "old_id": "sec-17",
+     "display": "§ 17"
+    },
+    {
+     "corpus_id": "s-77r",
+     "old_id": "sec-18",
+     "display": "§ 18"
+    },
+    {
+     "corpus_id": "s-77r–1",
+     "old_id": "sec-18a",
+     "display": "§ 18A"
+    },
+    {
+     "corpus_id": "s-77s",
+     "old_id": "sec-19",
+     "display": "§ 19"
+    },
+    {
+     "corpus_id": "s-77t",
+     "old_id": "sec-20",
+     "display": "§ 20"
+    },
+    {
+     "corpus_id": "s-77u",
+     "old_id": "sec-21",
+     "display": "§ 21"
+    },
+    {
+     "corpus_id": "s-77v",
+     "old_id": "sec-22",
+     "display": "§ 22"
+    },
+    {
+     "corpus_id": "s-77w",
+     "old_id": "sec-23",
+     "display": "§ 23"
+    },
+    {
+     "corpus_id": "s-77x",
+     "old_id": "sec-24",
+     "display": "§ 24"
+    },
+    {
+     "corpus_id": "s-77y",
+     "old_id": "sec-25",
+     "display": "§ 25"
+    },
+    {
+     "corpus_id": "s-77z",
+     "old_id": "sec-26",
+     "display": "§ 26"
+    },
+    {
+     "corpus_id": "s-77z–1",
+     "old_id": "sec-27",
+     "display": "§ 27"
+    },
+    {
+     "corpus_id": "s-77z–2",
+     "old_id": "sec-27a",
+     "display": "§ 27A"
+    },
+    {
+     "corpus_id": "s-77z–2a",
+     "old_id": "sec-27b",
+     "display": "§ 27B"
+    },
+    {
+     "corpus_id": "s-77z–3",
+     "old_id": "sec-28",
+     "display": "§ 28"
+    },
+    {
+     "corpus_id": "s-77z–4",
+     "old_id": "sec-29",
+     "display": "§ 29"
+    },
+    {
+     "corpus_id": "s-77aa",
+     "old_id": "",
+     "display": "Sched. A–B"
+    }
+   ]
+  },
+  {
+   "label": "General Rules and Regulations",
+   "sublabel": "under the Securities Act · 17 C.F.R. Part 230",
+   "kind": "cfr",
+   "items": [
+    {
+     "corpus_id": "r-230-100",
+     "old_id": "rule-100",
+     "display": "Rule 100"
+    },
+    {
+     "corpus_id": "r-230-110",
+     "old_id": "rule-110",
+     "display": "Rule 110"
+    },
+    {
+     "corpus_id": "r-230-111",
+     "old_id": "rule-111",
+     "display": "Rule 111"
+    },
+    {
+     "corpus_id": "r-230-120",
+     "old_id": "rule-120",
+     "display": "Rule 120"
+    },
+    {
+     "corpus_id": "r-230-122",
+     "old_id": "rule-122",
+     "display": "Rule 122"
+    },
+    {
+     "corpus_id": "r-230-130",
+     "old_id": "rule-130",
+     "display": "Rule 130"
+    },
+    {
+     "corpus_id": "r-230-131",
+     "old_id": "rule-131",
+     "display": "Rule 131"
+    },
+    {
+     "corpus_id": "r-230-132",
+     "old_id": "rule-132",
+     "display": "Rule 132"
+    },
+    {
+     "corpus_id": "r-230-134",
+     "old_id": "rule-134",
+     "display": "Rule 134"
+    },
+    {
+     "corpus_id": "r-230-134a",
+     "old_id": "rule-134a",
+     "display": "Rule 134a"
+    },
+    {
+     "corpus_id": "r-230-134b",
+     "old_id": "rule-134b",
+     "display": "Rule 134b"
+    },
+    {
+     "corpus_id": "r-230-135",
+     "old_id": "rule-135",
+     "display": "Rule 135"
+    },
+    {
+     "corpus_id": "r-230-135a",
+     "old_id": "rule-135a",
+     "display": "Rule 135a"
+    },
+    {
+     "corpus_id": "r-230-135b",
+     "old_id": "rule-135b",
+     "display": "Rule 135b"
+    },
+    {
+     "corpus_id": "r-230-135c",
+     "old_id": "rule-135c",
+     "display": "Rule 135c"
+    },
+    {
+     "corpus_id": "r-230-135d",
+     "old_id": "rule-135d",
+     "display": "Rule 135d"
+    },
+    {
+     "corpus_id": "r-230-135e",
+     "old_id": "rule-135e",
+     "display": "Rule 135e"
+    },
+    {
+     "corpus_id": "r-230-136",
+     "old_id": "rule-136",
+     "display": "Rule 136"
+    },
+    {
+     "corpus_id": "r-230-137",
+     "old_id": "rule-137",
+     "display": "Rule 137"
+    },
+    {
+     "corpus_id": "r-230-138",
+     "old_id": "rule-138",
+     "display": "Rule 138"
+    },
+    {
+     "corpus_id": "r-230-139",
+     "old_id": "rule-139",
+     "display": "Rule 139"
+    },
+    {
+     "corpus_id": "r-230-139a",
+     "old_id": "rule-139a",
+     "display": "Rule 139a"
+    },
+    {
+     "corpus_id": "r-230-139b",
+     "old_id": "rule-139b",
+     "display": "Rule 139b"
+    },
+    {
+     "corpus_id": "r-230-140",
+     "old_id": "rule-140",
+     "display": "Rule 140"
+    },
+    {
+     "corpus_id": "r-230-141",
+     "old_id": "rule-141",
+     "display": "Rule 141"
+    },
+    {
+     "corpus_id": "r-230-142",
+     "old_id": "rule-142",
+     "display": "Rule 142"
+    },
+    {
+     "corpus_id": "r-230-143",
+     "old_id": "rule-143",
+     "display": "Rule 143"
+    },
+    {
+     "corpus_id": "r-230-144",
+     "old_id": "rule-144",
+     "display": "Rule 144"
+    },
+    {
+     "corpus_id": "r-230-144A",
+     "old_id": "rule-144a",
+     "display": "Rule 144A"
+    },
+    {
+     "corpus_id": "r-230-145",
+     "old_id": "rule-145",
+     "display": "Rule 145"
+    },
+    {
+     "corpus_id": "r-230-145a",
+     "old_id": "rule-145a",
+     "display": "Rule 145a"
+    },
+    {
+     "corpus_id": "r-230-146",
+     "old_id": "rule-146",
+     "display": "Rule 146"
+    },
+    {
+     "corpus_id": "r-230-147",
+     "old_id": "rule-147",
+     "display": "Rule 147"
+    },
+    {
+     "corpus_id": "r-230-147A",
+     "old_id": "rule-147a",
+     "display": "Rule 147A"
+    },
+    {
+     "corpus_id": "r-230-148",
+     "old_id": "rule-148",
+     "display": "Rule 148"
+    },
+    {
+     "corpus_id": "r-230-149",
+     "old_id": "rule-149",
+     "display": "Rule 149"
+    },
+    {
+     "corpus_id": "r-230-150",
+     "old_id": "rule-150",
+     "display": "Rule 150"
+    },
+    {
+     "corpus_id": "r-230-151",
+     "old_id": "rule-151",
+     "display": "Rule 151"
+    },
+    {
+     "corpus_id": "r-230-152",
+     "old_id": "rule-152",
+     "display": "Rule 152"
+    },
+    {
+     "corpus_id": "r-230-152a",
+     "old_id": "rule-152a",
+     "display": "Rule 152a"
+    },
+    {
+     "corpus_id": "r-230-153",
+     "old_id": "rule-153",
+     "display": "Rule 153"
+    },
+    {
+     "corpus_id": "r-230-153a",
+     "old_id": "rule-153a",
+     "display": "Rule 153a"
+    },
+    {
+     "corpus_id": "r-230-153b",
+     "old_id": "rule-153b",
+     "display": "Rule 153b"
+    },
+    {
+     "corpus_id": "r-230-154",
+     "old_id": "rule-154",
+     "display": "Rule 154"
+    },
+    {
+     "corpus_id": "r-230-155",
+     "old_id": "rule-155",
+     "display": "Rule 155"
+    },
+    {
+     "corpus_id": "r-230-156",
+     "old_id": "rule-156",
+     "display": "Rule 156"
+    },
+    {
+     "corpus_id": "r-230-157",
+     "old_id": "rule-157",
+     "display": "Rule 157"
+    },
+    {
+     "corpus_id": "r-230-158",
+     "old_id": "rule-158",
+     "display": "Rule 158"
+    },
+    {
+     "corpus_id": "r-230-159",
+     "old_id": "rule-159",
+     "display": "Rule 159"
+    },
+    {
+     "corpus_id": "r-230-159A",
+     "old_id": "rule-159a",
+     "display": "Rule 159A"
+    },
+    {
+     "corpus_id": "r-230-160",
+     "old_id": "rule-160",
+     "display": "Rule 160"
+    },
+    {
+     "corpus_id": "r-230-161",
+     "old_id": "rule-161",
+     "display": "Rule 161"
+    },
+    {
+     "corpus_id": "r-230-162",
+     "old_id": "rule-162",
+     "display": "Rule 162"
+    },
+    {
+     "corpus_id": "r-230-163",
+     "old_id": "rule-163",
+     "display": "Rule 163"
+    },
+    {
+     "corpus_id": "r-230-163A",
+     "old_id": "rule-163a",
+     "display": "Rule 163A"
+    },
+    {
+     "corpus_id": "r-230-163B",
+     "old_id": "rule-163b",
+     "display": "Rule 163B"
+    },
+    {
+     "corpus_id": "r-230-164",
+     "old_id": "rule-164",
+     "display": "Rule 164"
+    },
+    {
+     "corpus_id": "r-230-165",
+     "old_id": "rule-165",
+     "display": "Rule 165"
+    },
+    {
+     "corpus_id": "r-230-166",
+     "old_id": "rule-166",
+     "display": "Rule 166"
+    },
+    {
+     "corpus_id": "r-230-167",
+     "old_id": "rule-167",
+     "display": "Rule 167"
+    },
+    {
+     "corpus_id": "r-230-168",
+     "old_id": "rule-168",
+     "display": "Rule 168"
+    },
+    {
+     "corpus_id": "r-230-169",
+     "old_id": "rule-169",
+     "display": "Rule 169"
+    },
+    {
+     "corpus_id": "r-230-170",
+     "old_id": "rule-170",
+     "display": "Rule 170"
+    },
+    {
+     "corpus_id": "r-230-171",
+     "old_id": "rule-171",
+     "display": "Rule 171"
+    },
+    {
+     "corpus_id": "r-230-172",
+     "old_id": "rule-172",
+     "display": "Rule 172"
+    },
+    {
+     "corpus_id": "r-230-173",
+     "old_id": "rule-173",
+     "display": "Rule 173"
+    },
+    {
+     "corpus_id": "r-230-174",
+     "old_id": "rule-174",
+     "display": "Rule 174"
+    },
+    {
+     "corpus_id": "r-230-175",
+     "old_id": "rule-175",
+     "display": "Rule 175"
+    },
+    {
+     "corpus_id": "r-230-176",
+     "old_id": "rule-176",
+     "display": "Rule 176"
+    },
+    {
+     "corpus_id": "r-230-180",
+     "old_id": "rule-180",
+     "display": "Rule 180"
+    },
+    {
+     "corpus_id": "r-230-190",
+     "old_id": "rule-190",
+     "display": "Rule 190"
+    },
+    {
+     "corpus_id": "r-230-191",
+     "old_id": "rule-191",
+     "display": "Rule 191"
+    },
+    {
+     "corpus_id": "r-230-192",
+     "old_id": "rule-192",
+     "display": "Rule 192"
+    },
+    {
+     "corpus_id": "r-230-193",
+     "old_id": "rule-193",
+     "display": "Rule 193"
+    },
+    {
+     "corpus_id": "r-230-194",
+     "old_id": "rule-194",
+     "display": "Rule 194"
+    },
+    {
+     "corpus_id": "r-230-215",
+     "old_id": "rule-215",
+     "display": "Rule 215"
+    },
+    {
+     "corpus_id": "r-230-236",
+     "old_id": "rule-236",
+     "display": "Rule 236"
+    },
+    {
+     "subhead": "Regulation A–R—Special Exemptions"
+    },
+    {
+     "corpus_id": "r-230-237",
+     "old_id": "rule-237",
+     "display": "Rule 237"
+    },
+    {
+     "corpus_id": "r-230-238",
+     "old_id": "rule-238",
+     "display": "Rule 238"
+    },
+    {
+     "corpus_id": "r-230-239",
+     "old_id": "rule-239",
+     "display": "Rule 239"
+    },
+    {
+     "corpus_id": "r-230-240",
+     "old_id": "rule-240",
+     "display": "Rule 240"
+    },
+    {
+     "corpus_id": "r-230-241",
+     "old_id": "rule-241",
+     "display": "Rule 241"
+    },
+    {
+     "subhead": "Regulation A—Conditional Small Issues Exemption"
+    },
+    {
+     "corpus_id": "r-230-251",
+     "old_id": "rule-251",
+     "display": "Rule 251"
+    },
+    {
+     "corpus_id": "r-230-252",
+     "old_id": "rule-252",
+     "display": "Rule 252"
+    },
+    {
+     "corpus_id": "r-230-253",
+     "old_id": "rule-253",
+     "display": "Rule 253"
+    },
+    {
+     "corpus_id": "r-230-254",
+     "old_id": "rule-254",
+     "display": "Rule 254"
+    },
+    {
+     "corpus_id": "r-230-255",
+     "old_id": "rule-255",
+     "display": "Rule 255"
+    },
+    {
+     "corpus_id": "r-230-256",
+     "old_id": "rule-256",
+     "display": "Rule 256"
+    },
+    {
+     "corpus_id": "r-230-257",
+     "old_id": "rule-257",
+     "display": "Rule 257"
+    },
+    {
+     "corpus_id": "r-230-258",
+     "old_id": "rule-258",
+     "display": "Rule 258"
+    },
+    {
+     "corpus_id": "r-230-259",
+     "old_id": "rule-259",
+     "display": "Rule 259"
+    },
+    {
+     "corpus_id": "r-230-260",
+     "old_id": "rule-260",
+     "display": "Rule 260"
+    },
+    {
+     "corpus_id": "r-230-261",
+     "old_id": "rule-261",
+     "display": "Rule 261"
+    },
+    {
+     "corpus_id": "r-230-262",
+     "old_id": "rule-262",
+     "display": "Rule 262"
+    },
+    {
+     "corpus_id": "r-230-263",
+     "old_id": "rule-263",
+     "display": "Rule 263"
+    },
+    {
+     "subhead": "Regulation C—Registration"
+    },
+    {
+     "corpus_id": "r-230-400",
+     "old_id": "rule-400",
+     "display": "Rule 400"
+    },
+    {
+     "corpus_id": "r-230-401",
+     "old_id": "rule-401",
+     "display": "Rule 401"
+    },
+    {
+     "corpus_id": "r-230-401a",
+     "old_id": "rule-401a",
+     "display": "Rule 401a"
+    },
+    {
+     "corpus_id": "r-230-402",
+     "old_id": "rule-402",
+     "display": "Rule 402"
+    },
+    {
+     "corpus_id": "r-230-403",
+     "old_id": "rule-403",
+     "display": "Rule 403"
+    },
+    {
+     "corpus_id": "r-230-404",
+     "old_id": "rule-404",
+     "display": "Rule 404"
+    },
+    {
+     "corpus_id": "r-230-405",
+     "old_id": "rule-405",
+     "display": "Rule 405"
+    },
+    {
+     "corpus_id": "r-230-406",
+     "old_id": "rule-406",
+     "display": "Rule 406"
+    },
+    {
+     "corpus_id": "r-230-408",
+     "old_id": "rule-408",
+     "display": "Rule 408"
+    },
+    {
+     "corpus_id": "r-230-409",
+     "old_id": "rule-409",
+     "display": "Rule 409"
+    },
+    {
+     "corpus_id": "r-230-410",
+     "old_id": "rule-410",
+     "display": "Rule 410"
+    },
+    {
+     "corpus_id": "r-230-411",
+     "old_id": "rule-411",
+     "display": "Rule 411"
+    },
+    {
+     "corpus_id": "r-230-412",
+     "old_id": "rule-412",
+     "display": "Rule 412"
+    },
+    {
+     "corpus_id": "r-230-413",
+     "old_id": "rule-413",
+     "display": "Rule 413"
+    },
+    {
+     "corpus_id": "r-230-414",
+     "old_id": "rule-414",
+     "display": "Rule 414"
+    },
+    {
+     "corpus_id": "r-230-415",
+     "old_id": "rule-415",
+     "display": "Rule 415"
+    },
+    {
+     "corpus_id": "r-230-416",
+     "old_id": "rule-416",
+     "display": "Rule 416"
+    },
+    {
+     "corpus_id": "r-230-417",
+     "old_id": "rule-417",
+     "display": "Rule 417"
+    },
+    {
+     "corpus_id": "r-230-418",
+     "old_id": "rule-418",
+     "display": "Rule 418"
+    },
+    {
+     "corpus_id": "r-230-419",
+     "old_id": "rule-419",
+     "display": "Rule 419"
+    },
+    {
+     "corpus_id": "r-230-420",
+     "old_id": "rule-420",
+     "display": "Rule 420"
+    },
+    {
+     "corpus_id": "r-230-421",
+     "old_id": "rule-421",
+     "display": "Rule 421"
+    },
+    {
+     "corpus_id": "r-230-423",
+     "old_id": "rule-423",
+     "display": "Rule 423"
+    },
+    {
+     "corpus_id": "r-230-424",
+     "old_id": "rule-424",
+     "display": "Rule 424"
+    },
+    {
+     "corpus_id": "r-230-425",
+     "old_id": "rule-425",
+     "display": "Rule 425"
+    },
+    {
+     "corpus_id": "r-230-426",
+     "old_id": "rule-426",
+     "display": "Rule 426"
+    },
+    {
+     "corpus_id": "r-230-427",
+     "old_id": "rule-427",
+     "display": "Rule 427"
+    },
+    {
+     "corpus_id": "r-230-428",
+     "old_id": "rule-428",
+     "display": "Rule 428"
+    },
+    {
+     "corpus_id": "r-230-429",
+     "old_id": "rule-429",
+     "display": "Rule 429"
+    },
+    {
+     "corpus_id": "r-230-430",
+     "old_id": "rule-430",
+     "display": "Rule 430"
+    },
+    {
+     "corpus_id": "r-230-430A",
+     "old_id": "rule-430a",
+     "display": "Rule 430A"
+    },
+    {
+     "corpus_id": "r-230-430B",
+     "old_id": "rule-430b",
+     "display": "Rule 430B"
+    },
+    {
+     "corpus_id": "r-230-430C",
+     "old_id": "rule-430c",
+     "display": "Rule 430C"
+    },
+    {
+     "corpus_id": "r-230-430D",
+     "old_id": "rule-430d",
+     "display": "Rule 430D"
+    },
+    {
+     "corpus_id": "r-230-431",
+     "old_id": "rule-431",
+     "display": "Rule 431"
+    },
+    {
+     "corpus_id": "r-230-432",
+     "old_id": "rule-432",
+     "display": "Rule 432"
+    },
+    {
+     "corpus_id": "r-230-433",
+     "old_id": "rule-433",
+     "display": "Rule 433"
+    },
+    {
+     "corpus_id": "r-230-436",
+     "old_id": "rule-436",
+     "display": "Rule 436"
+    },
+    {
+     "corpus_id": "r-230-437",
+     "old_id": "rule-437",
+     "display": "Rule 437"
+    },
+    {
+     "corpus_id": "r-230-437a",
+     "old_id": "rule-437a",
+     "display": "Rule 437a"
+    },
+    {
+     "corpus_id": "r-230-438",
+     "old_id": "rule-438",
+     "display": "Rule 438"
+    },
+    {
+     "corpus_id": "r-230-439",
+     "old_id": "rule-439",
+     "display": "Rule 439"
+    },
+    {
+     "corpus_id": "r-230-455",
+     "old_id": "rule-455",
+     "display": "Rule 455"
+    },
+    {
+     "corpus_id": "r-230-456",
+     "old_id": "rule-456",
+     "display": "Rule 456"
+    },
+    {
+     "corpus_id": "r-230-457",
+     "old_id": "rule-457",
+     "display": "Rule 457"
+    },
+    {
+     "corpus_id": "r-230-459",
+     "old_id": "rule-459",
+     "display": "Rule 459"
+    },
+    {
+     "corpus_id": "r-230-460",
+     "old_id": "rule-460",
+     "display": "Rule 460"
+    },
+    {
+     "corpus_id": "r-230-461",
+     "old_id": "rule-461",
+     "display": "Rule 461"
+    },
+    {
+     "corpus_id": "r-230-462",
+     "old_id": "rule-462",
+     "display": "Rule 462"
+    },
+    {
+     "corpus_id": "r-230-463",
+     "old_id": "rule-463",
+     "display": "Rule 463"
+    },
+    {
+     "corpus_id": "r-230-464",
+     "old_id": "rule-464",
+     "display": "Rule 464"
+    },
+    {
+     "corpus_id": "r-230-466",
+     "old_id": "rule-466",
+     "display": "Rule 466"
+    },
+    {
+     "corpus_id": "r-230-467",
+     "old_id": "rule-467",
+     "display": "Rule 467"
+    },
+    {
+     "corpus_id": "r-230-470",
+     "old_id": "rule-470",
+     "display": "Rule 470"
+    },
+    {
+     "corpus_id": "r-230-471",
+     "old_id": "rule-471",
+     "display": "Rule 471"
+    },
+    {
+     "corpus_id": "r-230-472",
+     "old_id": "rule-472",
+     "display": "Rule 472"
+    },
+    {
+     "corpus_id": "r-230-473",
+     "old_id": "rule-473",
+     "display": "Rule 473"
+    },
+    {
+     "corpus_id": "r-230-474",
+     "old_id": "rule-474",
+     "display": "Rule 474"
+    },
+    {
+     "corpus_id": "r-230-475",
+     "old_id": "rule-475",
+     "display": "Rule 475"
+    },
+    {
+     "corpus_id": "r-230-475a",
+     "old_id": "rule-475a",
+     "display": "Rule 475a"
+    },
+    {
+     "corpus_id": "r-230-476",
+     "old_id": "rule-476",
+     "display": "Rule 476"
+    },
+    {
+     "corpus_id": "r-230-477",
+     "old_id": "rule-477",
+     "display": "Rule 477"
+    },
+    {
+     "corpus_id": "r-230-478",
+     "old_id": "rule-478",
+     "display": "Rule 478"
+    },
+    {
+     "corpus_id": "r-230-479",
+     "old_id": "rule-479",
+     "display": "Rule 479"
+    },
+    {
+     "corpus_id": "r-230-480",
+     "old_id": "rule-480",
+     "display": "Rule 480"
+    },
+    {
+     "corpus_id": "r-230-481",
+     "old_id": "rule-481",
+     "display": "Rule 481"
+    },
+    {
+     "corpus_id": "r-230-482",
+     "old_id": "rule-482",
+     "display": "Rule 482"
+    },
+    {
+     "corpus_id": "r-230-483",
+     "old_id": "rule-483",
+     "display": "Rule 483"
+    },
+    {
+     "corpus_id": "r-230-484",
+     "old_id": "rule-484",
+     "display": "Rule 484"
+    },
+    {
+     "corpus_id": "r-230-485",
+     "old_id": "rule-485",
+     "display": "Rule 485"
+    },
+    {
+     "corpus_id": "r-230-486",
+     "old_id": "rule-486",
+     "display": "Rule 486"
+    },
+    {
+     "corpus_id": "r-230-487",
+     "old_id": "rule-487",
+     "display": "Rule 487"
+    },
+    {
+     "corpus_id": "r-230-488",
+     "old_id": "rule-488",
+     "display": "Rule 488"
+    },
+    {
+     "corpus_id": "r-230-489",
+     "old_id": "rule-489",
+     "display": "Rule 489"
+    },
+    {
+     "corpus_id": "r-230-490",
+     "old_id": "rule-490",
+     "display": "Rule 490"
+    },
+    {
+     "corpus_id": "r-230-491",
+     "old_id": "rule-491",
+     "display": "Rule 491"
+    },
+    {
+     "corpus_id": "r-230-492",
+     "old_id": "rule-492",
+     "display": "Rule 492"
+    },
+    {
+     "corpus_id": "r-230-493",
+     "old_id": "rule-493",
+     "display": "Rule 493"
+    },
+    {
+     "corpus_id": "r-230-494",
+     "old_id": "rule-494",
+     "display": "Rule 494"
+    },
+    {
+     "corpus_id": "r-230-495",
+     "old_id": "rule-495",
+     "display": "Rule 495"
+    },
+    {
+     "corpus_id": "r-230-496",
+     "old_id": "rule-496",
+     "display": "Rule 496"
+    },
+    {
+     "corpus_id": "r-230-497",
+     "old_id": "rule-497",
+     "display": "Rule 497"
+    },
+    {
+     "corpus_id": "r-230-498",
+     "old_id": "rule-498",
+     "display": "Rule 498"
+    },
+    {
+     "corpus_id": "r-230-498A",
+     "old_id": "rule-498a",
+     "display": "Rule 498A"
+    },
+    {
+     "subhead": "Regulation D—Rules Governing The Limited Offer And Sale Of Securities"
+    },
+    {
+     "corpus_id": "r-230-500",
+     "old_id": "rule-500",
+     "display": "Rule 500"
+    },
+    {
+     "corpus_id": "r-230-501",
+     "old_id": "rule-501",
+     "display": "Rule 501"
+    },
+    {
+     "corpus_id": "r-230-502",
+     "old_id": "rule-502",
+     "display": "Rule 502"
+    },
+    {
+     "corpus_id": "r-230-503",
+     "old_id": "rule-503",
+     "display": "Rule 503"
+    },
+    {
+     "corpus_id": "r-230-504",
+     "old_id": "rule-504",
+     "display": "Rule 504"
+    },
+    {
+     "corpus_id": "r-230-505",
+     "old_id": "rule-505",
+     "display": "Rule 505"
+    },
+    {
+     "corpus_id": "r-230-506",
+     "old_id": "rule-506",
+     "display": "Rule 506"
+    },
+    {
+     "corpus_id": "r-230-507",
+     "old_id": "rule-507",
+     "display": "Rule 507"
+    },
+    {
+     "corpus_id": "r-230-508",
+     "old_id": "rule-508",
+     "display": "Rule 508"
+    },
+    {
+     "subhead": "Regulation E—Exemption For Securities Of Small Business Investment"
+    },
+    {
+     "corpus_id": "r-230-601",
+     "old_id": "rule-601",
+     "display": "Rule 601"
+    },
+    {
+     "corpus_id": "r-230-602",
+     "old_id": "rule-602",
+     "display": "Rule 602"
+    },
+    {
+     "corpus_id": "r-230-603",
+     "old_id": "rule-603",
+     "display": "Rule 603"
+    },
+    {
+     "corpus_id": "r-230-604",
+     "old_id": "rule-604",
+     "display": "Rule 604"
+    },
+    {
+     "corpus_id": "r-230-605",
+     "old_id": "rule-605",
+     "display": "Rule 605"
+    },
+    {
+     "corpus_id": "r-230-606",
+     "old_id": "rule-606",
+     "display": "Rule 606"
+    },
+    {
+     "corpus_id": "r-230-607",
+     "old_id": "rule-607",
+     "display": "Rule 607"
+    },
+    {
+     "corpus_id": "r-230-608",
+     "old_id": "rule-608",
+     "display": "Rule 608"
+    },
+    {
+     "corpus_id": "r-230-609",
+     "old_id": "rule-609",
+     "display": "Rule 609"
+    },
+    {
+     "corpus_id": "r-230-610",
+     "old_id": "rule-610",
+     "display": "Rule 610"
+    },
+    {
+     "corpus_id": "r-230-610a",
+     "old_id": "rule-610a",
+     "display": "Rule 610a"
+    },
+    {
+     "corpus_id": "r-230-701",
+     "old_id": "rule-701",
+     "display": "Rule 701"
+    },
+    {
+     "corpus_id": "r-230-800",
+     "old_id": "rule-800",
+     "display": "Rule 800"
+    },
+    {
+     "corpus_id": "r-230-801",
+     "old_id": "rule-801",
+     "display": "Rule 801"
+    },
+    {
+     "corpus_id": "r-230-802",
+     "old_id": "rule-802",
+     "display": "Rule 802"
+    },
+    {
+     "subhead": "Regulation S—Rules Governing Offers And Sales Made Outside The United"
+    },
+    {
+     "corpus_id": "r-230-901",
+     "old_id": "rule-901",
+     "display": "Rule 901"
+    },
+    {
+     "corpus_id": "r-230-902",
+     "old_id": "rule-902",
+     "display": "Rule 902"
+    },
+    {
+     "corpus_id": "r-230-903",
+     "old_id": "rule-903",
+     "display": "Rule 903"
+    },
+    {
+     "corpus_id": "r-230-904",
+     "old_id": "rule-904",
+     "display": "Rule 904"
+    },
+    {
+     "corpus_id": "r-230-905",
+     "old_id": "rule-905",
+     "display": "Rule 905"
+    },
+    {
+     "subhead": "Regulation Ce—Coordinated Exemptions For Certain Issues Of Securities"
+    },
+    {
+     "corpus_id": "r-230-1001",
+     "old_id": "rule-1001",
+     "display": "Rule 1001"
+    }
+   ]
+  },
+  {
+   "label": "Regulation S-K",
+   "sublabel": "standard instructions for filing forms · 17 C.F.R. Part 229",
+   "kind": "cfr",
+   "items": [
+    {
+     "corpus_id": "r-229-10",
+     "old_id": "",
+     "display": "Item 10"
+    },
+    {
+     "corpus_id": "r-229-101",
+     "old_id": "",
+     "display": "Item 101"
+    },
+    {
+     "corpus_id": "r-229-102",
+     "old_id": "",
+     "display": "Item 102"
+    },
+    {
+     "corpus_id": "r-229-103",
+     "old_id": "",
+     "display": "Item 103"
+    },
+    {
+     "corpus_id": "r-229-104",
+     "old_id": "",
+     "display": "Item 104"
+    },
+    {
+     "corpus_id": "r-229-105",
+     "old_id": "",
+     "display": "Item 105"
+    },
+    {
+     "corpus_id": "r-229-106",
+     "old_id": "",
+     "display": "Item 106"
+    },
+    {
+     "corpus_id": "r-229-201",
+     "old_id": "",
+     "display": "Item 201"
+    },
+    {
+     "corpus_id": "r-229-202",
+     "old_id": "",
+     "display": "Item 202"
+    },
+    {
+     "corpus_id": "r-229-301",
+     "old_id": "",
+     "display": "Item 301"
+    },
+    {
+     "corpus_id": "r-229-302",
+     "old_id": "",
+     "display": "Item 302"
+    },
+    {
+     "corpus_id": "r-229-303",
+     "old_id": "",
+     "display": "Item 303"
+    },
+    {
+     "corpus_id": "r-229-304",
+     "old_id": "",
+     "display": "Item 304"
+    },
+    {
+     "corpus_id": "r-229-305",
+     "old_id": "",
+     "display": "Item 305"
+    },
+    {
+     "corpus_id": "r-229-306",
+     "old_id": "",
+     "display": "Item 306"
+    },
+    {
+     "corpus_id": "r-229-307",
+     "old_id": "",
+     "display": "Item 307"
+    },
+    {
+     "corpus_id": "r-229-308",
+     "old_id": "",
+     "display": "Item 308"
+    },
+    {
+     "corpus_id": "r-229-401",
+     "old_id": "",
+     "display": "Item 401"
+    },
+    {
+     "corpus_id": "r-229-402",
+     "old_id": "",
+     "display": "Item 402"
+    },
+    {
+     "corpus_id": "r-229-403",
+     "old_id": "",
+     "display": "Item 403"
+    },
+    {
+     "corpus_id": "r-229-404",
+     "old_id": "",
+     "display": "Item 404"
+    },
+    {
+     "corpus_id": "r-229-405",
+     "old_id": "",
+     "display": "Item 405"
+    },
+    {
+     "corpus_id": "r-229-406",
+     "old_id": "",
+     "display": "Item 406"
+    },
+    {
+     "corpus_id": "r-229-407",
+     "old_id": "",
+     "display": "Item 407"
+    },
+    {
+     "corpus_id": "r-229-408",
+     "old_id": "",
+     "display": "Item 408"
+    },
+    {
+     "corpus_id": "r-229-501",
+     "old_id": "",
+     "display": "Item 501"
+    },
+    {
+     "corpus_id": "r-229-502",
+     "old_id": "",
+     "display": "Item 502"
+    },
+    {
+     "corpus_id": "r-229-503",
+     "old_id": "",
+     "display": "Item 503"
+    },
+    {
+     "corpus_id": "r-229-504",
+     "old_id": "",
+     "display": "Item 504"
+    },
+    {
+     "corpus_id": "r-229-505",
+     "old_id": "",
+     "display": "Item 505"
+    },
+    {
+     "corpus_id": "r-229-506",
+     "old_id": "",
+     "display": "Item 506"
+    },
+    {
+     "corpus_id": "r-229-507",
+     "old_id": "",
+     "display": "Item 507"
+    },
+    {
+     "corpus_id": "r-229-508",
+     "old_id": "",
+     "display": "Item 508"
+    },
+    {
+     "corpus_id": "r-229-509",
+     "old_id": "",
+     "display": "Item 509"
+    },
+    {
+     "corpus_id": "r-229-510",
+     "old_id": "",
+     "display": "Item 510"
+    },
+    {
+     "corpus_id": "r-229-511",
+     "old_id": "",
+     "display": "Item 511"
+    },
+    {
+     "corpus_id": "r-229-512",
+     "old_id": "",
+     "display": "Item 512"
+    },
+    {
+     "corpus_id": "r-229-601",
+     "old_id": "",
+     "display": "Item 601"
+    },
+    {
+     "corpus_id": "r-229-701",
+     "old_id": "",
+     "display": "Item 701"
+    },
+    {
+     "corpus_id": "r-229-702",
+     "old_id": "",
+     "display": "Item 702"
+    },
+    {
+     "corpus_id": "r-229-703",
+     "old_id": "",
+     "display": "Item 703"
+    },
+    {
+     "corpus_id": "r-229-801",
+     "old_id": "",
+     "display": "Item 801"
+    },
+    {
+     "corpus_id": "r-229-802",
+     "old_id": "",
+     "display": "Item 802"
+    },
+    {
+     "corpus_id": "r-229-901",
+     "old_id": "",
+     "display": "Item 901"
+    },
+    {
+     "corpus_id": "r-229-902",
+     "old_id": "",
+     "display": "Item 902"
+    },
+    {
+     "corpus_id": "r-229-903",
+     "old_id": "",
+     "display": "Item 903"
+    },
+    {
+     "corpus_id": "r-229-904",
+     "old_id": "",
+     "display": "Item 904"
+    },
+    {
+     "corpus_id": "r-229-905",
+     "old_id": "",
+     "display": "Item 905"
+    },
+    {
+     "corpus_id": "r-229-906",
+     "old_id": "",
+     "display": "Item 906"
+    },
+    {
+     "corpus_id": "r-229-907",
+     "old_id": "",
+     "display": "Item 907"
+    },
+    {
+     "corpus_id": "r-229-908",
+     "old_id": "",
+     "display": "Item 908"
+    },
+    {
+     "corpus_id": "r-229-909",
+     "old_id": "",
+     "display": "Item 909"
+    },
+    {
+     "corpus_id": "r-229-910",
+     "old_id": "",
+     "display": "Item 910"
+    },
+    {
+     "corpus_id": "r-229-911",
+     "old_id": "",
+     "display": "Item 911"
+    },
+    {
+     "corpus_id": "r-229-912",
+     "old_id": "",
+     "display": "Item 912"
+    },
+    {
+     "corpus_id": "r-229-913",
+     "old_id": "",
+     "display": "Item 913"
+    },
+    {
+     "corpus_id": "r-229-914",
+     "old_id": "",
+     "display": "Item 914"
+    },
+    {
+     "corpus_id": "r-229-915",
+     "old_id": "",
+     "display": "Item 915"
+    },
+    {
+     "corpus_id": "r-229-1000",
+     "old_id": "",
+     "display": "Item 1000"
+    },
+    {
+     "corpus_id": "r-229-1001",
+     "old_id": "",
+     "display": "Item 1001"
+    },
+    {
+     "corpus_id": "r-229-1002",
+     "old_id": "",
+     "display": "Item 1002"
+    },
+    {
+     "corpus_id": "r-229-1003",
+     "old_id": "",
+     "display": "Item 1003"
+    },
+    {
+     "corpus_id": "r-229-1004",
+     "old_id": "",
+     "display": "Item 1004"
+    },
+    {
+     "corpus_id": "r-229-1005",
+     "old_id": "",
+     "display": "Item 1005"
+    },
+    {
+     "corpus_id": "r-229-1006",
+     "old_id": "",
+     "display": "Item 1006"
+    },
+    {
+     "corpus_id": "r-229-1007",
+     "old_id": "",
+     "display": "Item 1007"
+    },
+    {
+     "corpus_id": "r-229-1008",
+     "old_id": "",
+     "display": "Item 1008"
+    },
+    {
+     "corpus_id": "r-229-1009",
+     "old_id": "",
+     "display": "Item 1009"
+    },
+    {
+     "corpus_id": "r-229-1010",
+     "old_id": "",
+     "display": "Item 1010"
+    },
+    {
+     "corpus_id": "r-229-1011",
+     "old_id": "",
+     "display": "Item 1011"
+    },
+    {
+     "corpus_id": "r-229-1012",
+     "old_id": "",
+     "display": "Item 1012"
+    },
+    {
+     "corpus_id": "r-229-1013",
+     "old_id": "",
+     "display": "Item 1013"
+    },
+    {
+     "corpus_id": "r-229-1014",
+     "old_id": "",
+     "display": "Item 1014"
+    },
+    {
+     "corpus_id": "r-229-1015",
+     "old_id": "",
+     "display": "Item 1015"
+    },
+    {
+     "corpus_id": "r-229-1016",
+     "old_id": "",
+     "display": "Item 1016"
+    },
+    {
+     "corpus_id": "r-229-1100",
+     "old_id": "",
+     "display": "Item 1100"
+    },
+    {
+     "corpus_id": "r-229-1101",
+     "old_id": "",
+     "display": "Item 1101"
+    },
+    {
+     "corpus_id": "r-229-1102",
+     "old_id": "",
+     "display": "Item 1102"
+    },
+    {
+     "corpus_id": "r-229-1103",
+     "old_id": "",
+     "display": "Item 1103"
+    },
+    {
+     "corpus_id": "r-229-1104",
+     "old_id": "",
+     "display": "Item 1104"
+    },
+    {
+     "corpus_id": "r-229-1105",
+     "old_id": "",
+     "display": "Item 1105"
+    },
+    {
+     "corpus_id": "r-229-1106",
+     "old_id": "",
+     "display": "Item 1106"
+    },
+    {
+     "corpus_id": "r-229-1107",
+     "old_id": "",
+     "display": "Item 1107"
+    },
+    {
+     "corpus_id": "r-229-1108",
+     "old_id": "",
+     "display": "Item 1108"
+    },
+    {
+     "corpus_id": "r-229-1109",
+     "old_id": "",
+     "display": "Item 1109"
+    },
+    {
+     "corpus_id": "r-229-1110",
+     "old_id": "",
+     "display": "Item 1110"
+    },
+    {
+     "corpus_id": "r-229-1111",
+     "old_id": "",
+     "display": "Item 1111"
+    },
+    {
+     "corpus_id": "r-229-1112",
+     "old_id": "",
+     "display": "Item 1112"
+    },
+    {
+     "corpus_id": "r-229-1113",
+     "old_id": "",
+     "display": "Item 1113"
+    },
+    {
+     "corpus_id": "r-229-1114",
+     "old_id": "",
+     "display": "Item 1114"
+    },
+    {
+     "corpus_id": "r-229-1115",
+     "old_id": "",
+     "display": "Item 1115"
+    },
+    {
+     "corpus_id": "r-229-1116",
+     "old_id": "",
+     "display": "Item 1116"
+    },
+    {
+     "corpus_id": "r-229-1117",
+     "old_id": "",
+     "display": "Item 1117"
+    },
+    {
+     "corpus_id": "r-229-1118",
+     "old_id": "",
+     "display": "Item 1118"
+    },
+    {
+     "corpus_id": "r-229-1119",
+     "old_id": "",
+     "display": "Item 1119"
+    },
+    {
+     "corpus_id": "r-229-1120",
+     "old_id": "",
+     "display": "Item 1120"
+    },
+    {
+     "corpus_id": "r-229-1121",
+     "old_id": "",
+     "display": "Item 1121"
+    },
+    {
+     "corpus_id": "r-229-1122",
+     "old_id": "",
+     "display": "Item 1122"
+    },
+    {
+     "corpus_id": "r-229-1123",
+     "old_id": "",
+     "display": "Item 1123"
+    },
+    {
+     "corpus_id": "r-229-1124",
+     "old_id": "",
+     "display": "Item 1124"
+    },
+    {
+     "corpus_id": "r-229-1125",
+     "old_id": "",
+     "display": "Item 1125"
+    },
+    {
+     "corpus_id": "r-229-1201",
+     "old_id": "",
+     "display": "Item 1201"
+    },
+    {
+     "corpus_id": "r-229-1202",
+     "old_id": "",
+     "display": "Item 1202"
+    },
+    {
+     "corpus_id": "r-229-1203",
+     "old_id": "",
+     "display": "Item 1203"
+    },
+    {
+     "corpus_id": "r-229-1204",
+     "old_id": "",
+     "display": "Item 1204"
+    },
+    {
+     "corpus_id": "r-229-1205",
+     "old_id": "",
+     "display": "Item 1205"
+    },
+    {
+     "corpus_id": "r-229-1206",
+     "old_id": "",
+     "display": "Item 1206"
+    },
+    {
+     "corpus_id": "r-229-1207",
+     "old_id": "",
+     "display": "Item 1207"
+    },
+    {
+     "corpus_id": "r-229-1208",
+     "old_id": "",
+     "display": "Item 1208"
+    },
+    {
+     "corpus_id": "r-229-1300",
+     "old_id": "",
+     "display": "Item 1300"
+    },
+    {
+     "corpus_id": "r-229-1301",
+     "old_id": "",
+     "display": "Item 1301"
+    },
+    {
+     "corpus_id": "r-229-1302",
+     "old_id": "",
+     "display": "Item 1302"
+    },
+    {
+     "corpus_id": "r-229-1303",
+     "old_id": "",
+     "display": "Item 1303"
+    },
+    {
+     "corpus_id": "r-229-1304",
+     "old_id": "",
+     "display": "Item 1304"
+    },
+    {
+     "corpus_id": "r-229-1305",
+     "old_id": "",
+     "display": "Item 1305"
+    },
+    {
+     "corpus_id": "r-229-1401",
+     "old_id": "",
+     "display": "Item 1401"
+    },
+    {
+     "corpus_id": "r-229-1402",
+     "old_id": "",
+     "display": "Item 1402"
+    },
+    {
+     "corpus_id": "r-229-1403",
+     "old_id": "",
+     "display": "Item 1403"
+    },
+    {
+     "corpus_id": "r-229-1404",
+     "old_id": "",
+     "display": "Item 1404"
+    },
+    {
+     "corpus_id": "r-229-1405",
+     "old_id": "",
+     "display": "Item 1405"
+    },
+    {
+     "corpus_id": "r-229-1406",
+     "old_id": "",
+     "display": "Item 1406"
+    },
+    {
+     "corpus_id": "r-229-1601",
+     "old_id": "",
+     "display": "Item 1601"
+    },
+    {
+     "corpus_id": "r-229-1602",
+     "old_id": "",
+     "display": "Item 1602"
+    },
+    {
+     "corpus_id": "r-229-1603",
+     "old_id": "",
+     "display": "Item 1603"
+    },
+    {
+     "corpus_id": "r-229-1604",
+     "old_id": "",
+     "display": "Item 1604"
+    },
+    {
+     "corpus_id": "r-229-1605",
+     "old_id": "",
+     "display": "Item 1605"
+    },
+    {
+     "corpus_id": "r-229-1606",
+     "old_id": "",
+     "display": "Item 1606"
+    },
+    {
+     "corpus_id": "r-229-1607",
+     "old_id": "",
+     "display": "Item 1607"
+    },
+    {
+     "corpus_id": "r-229-1608",
+     "old_id": "",
+     "display": "Item 1608"
+    },
+    {
+     "corpus_id": "r-229-1609",
+     "old_id": "",
+     "display": "Item 1609"
+    },
+    {
+     "corpus_id": "r-229-1610",
+     "old_id": "",
+     "display": "Item 1610"
+    }
+   ]
+  }
+ ],
+ "unmapped_legacy_ids": [
+  "rule-651-656"
+ ]
+}

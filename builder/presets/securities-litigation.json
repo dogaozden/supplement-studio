@@ -1,0 +1,15 @@
+{
+  "id": "securities-litigation",
+  "name": "Securities Litigation & Enforcement",
+  "description": "Express liabilities, Rule 10b-5, insider trading, the PSLRA and SLUSA.",
+  "groupTitles": {},
+  "selection": [
+    "s-77k", "s-77l", "s-77m", "s-77o", "s-77p", "s-77q",
+    "s-77t", "s-77z–1", "s-77z–2", "s-78c", "s-78i", "s-78j",
+    "s-78j–1", "s-78n", "s-78p", "s-78r", "s-78t", "s-78t–1",
+    "s-78u", "s-78u–1", "s-78u–3", "s-78u–4", "s-78u–5", "s-78u–6",
+    "s-78bb", "s-78ff", "s-7241", "s-7243", "r-240-10b-5", "r-240-10b5-1",
+    "r-240-10b5-2", "r-240-14a-9", "r-240-14e-3", "r-243-100", "r-243-101", "r-243-102",
+    "r-243-103"
+  ]
+}

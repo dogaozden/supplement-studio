@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest==8.3.3
+pytest-recording==0.13.2
+pdfplumber==0.11.4
+playwright==1.47.0
+pypdf==5.9.0
+pillow==11.3.0

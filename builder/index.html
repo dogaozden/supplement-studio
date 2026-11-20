@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supplement Studio</title>
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+<link rel="stylesheet" href="./theme.css">
+<link rel="stylesheet" href="./app.css">
+</head>
+<body data-empty="true">
+
+<header class="topbar">
+  <div class="topbar-left">
+    <h1 class="app-title"><!-- set from config.js PRODUCT.name at boot --></h1>
+    <input id="supp-title" class="supp-title" placeholder="Title of your supplement" aria-label="Title of your supplement">
+  </div>
+  <div class="topbar-right">
+    <button id="btn-search" class="btn">Search <span class="kbd">⌘K</span></button>
+    <button id="btn-presets" class="btn">Templates</button>
+    <button id="btn-metadata" class="btn">Cover &amp; settings</button>
+    <span class="pop-anchor">
+      <button id="btn-share" class="btn" hidden>Copy link</button>
+      <div id="share-pop" class="popover" role="dialog" aria-label="Share link" hidden>
+        <p class="pop-status" aria-live="polite"></p>
+        <input id="share-link" class="pop-link" readonly aria-label="Link to this supplement" spellcheck="false">
+        <p class="pop-note">Anyone with this link can open a copy; nothing is stored on a server.</p>
+        <p class="pop-warn" hidden></p>
+        <div class="pop-actions">
+          <button id="share-copy" type="button" class="btn">Copy</button>
+          <button type="button" class="btn btn-quiet" data-close>Close</button>
+        </div>
+      </div>
+    </span>
+    <span class="pop-anchor">
+      <button id="btn-more" class="btn btn-quiet">More</button>
+      <div id="more-menu" class="popover menu" role="menu" aria-label="More" hidden>
+        <button id="btn-export-json" type="button" role="menuitem">Export selection (JSON)</button>
+        <button id="btn-import-json" type="button" role="menuitem">Import selection (JSON)</button>
+        <button id="btn-save-preset" type="button" role="menuitem">Save as template…</button>
+        <button id="btn-sort-all" type="button" role="menuitem">Sort the whole book into Code order</button>
+        <button id="btn-help" type="button" role="menuitem">Keyboard shortcuts</button>
+      </div>
+      <input type="file" id="file-import" accept="application/json" hidden>
+    </span>
+    <span class="history">
+      <button id="btn-undo" class="btn btn-quiet" disabled>Undo</button>
+      <button id="btn-redo" class="btn btn-quiet" disabled>Redo</button>
+    </span>
+  </div>
+</header>
+
+<!-- mobile panel switcher; behavior in ui/tabs.js, visibility CSS-only (hidden ≥900px) -->
+<nav class="workspace-tabs" aria-label="Workspace panels">
+  <button class="tab" data-panel="tree" aria-pressed="true">Browse</button>
+  <button class="tab" data-panel="selected">Your book</button>
+  <button class="tab" data-panel="preview">Preview</button>
+</nav>
+
+<main class="workspace">
+  <section id="tree-col" class="col col-tree" aria-label="Browse the Code">
+    <div class="col-head">
+      <span class="col-label">Browse the Code</span>
+    </div>
+    <input id="tree-filter" class="filter" type="search" placeholder="Filter this list…" aria-label="Filter the list of statutes and rules" autocomplete="off">
+    <div id="corpus-loading" class="corpus-loading" hidden aria-hidden="true">
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row short"></div>
+    </div>
+    <div id="tree" class="tree" role="group" aria-label="Statutes and regulations"></div>
+  </section>
+
+  <section id="selected-col" class="col col-selected" aria-label="Your book">
+    <div class="col-head">
+      <span class="col-label">Your book</span>
+      <span class="count-wrap"><span id="selected-count" class="counter" aria-live="polite">0</span> <span class="counter-noun">provisions</span></span>
+      <button id="btn-clear" class="btn btn-quiet" disabled>Clear all</button>
+    </div>
+    <div id="selected" class="selected" role="group" aria-label="The parts of your book"></div>
+  </section>
+
+  <section id="preview-col" class="col col-preview" aria-label="Preview">
+    <div class="col-head preview-head">
+      <div class="preview-head-left">
+        <span class="col-label">Preview</span>
+        <span id="page-estimate" class="estimate" aria-live="polite">Nothing selected yet</span>
+      </div>
+      <div class="preview-head-right">
+        <button id="btn-export-reader" class="btn btn-quiet" hidden>Student reader (HTML)</button>
+        <button id="btn-generate" class="btn btn-primary">Download PDF</button>
+      </div>
+    </div>
+
+    <!-- shown while the book is empty (ui/firstrun.js); hides #preview-pane -->
+    <div id="first-run" class="first-run">
+      <div class="fr-inner">
+        <h2 class="fr-title">Build your statutory supplement</h2>
+        <p class="fr-lede">Choose the statutes and rules your course uses. Out comes a clean, book-quality PDF made from the official sources.</p>
+        <ol class="fr-steps">
+          <li><span class="n">1</span><b>Choose provisions</b> <span class="fr-step-note">by citation, or browse the Code</span></li>
+          <li><span class="n">2</span><b>Arrange and title the parts</b> <span class="fr-step-note">drag to reorder, add your cover</span></li>
+          <li><span class="n">3</span><b>Download the PDF</b> <span class="fr-step-note">with a linked table of contents</span></li>
+        </ol>
+
+        <h3 class="fr-label">Start from a template</h3>
+        <ul id="fr-templates" class="fr-templates"></ul>
+
+        <h3 class="fr-label"><label for="fr-search">Or find a provision by citation</label></h3>
+        <div class="fr-search">
+          <input id="fr-search" type="search" placeholder="Try: Rule 10b-5, § 77e, Securities Act § 5, Reg D"
+                 autocomplete="off" spellcheck="false" aria-controls="fr-results" aria-autocomplete="list">
+          <p id="fr-none" class="fr-none" hidden>Nothing matches. Try a rule number such as 10b-5, or a section such as § 77e.</p>
+          <ul id="fr-results" class="results" role="listbox" aria-label="Search results"></ul>
+        </div>
+        <p class="fr-foot">Have a saved file? <button id="fr-import" type="button" class="link">Open it</button>. Opening a link someone sent you works too.</p>
+      </div>
+    </div>
+
+    <div id="preview-pane" class="preview-pane"></div>
+  </section>
+</main>
+
+<footer class="statusbar">
+  <span id="corpus-status" class="status-currency"></span>
+  <span class="status-note">Free. No account. Your work stays in this browser.</span>
+</footer>
+
+<!-- Confirm dialog (replaces window.confirm; used for deleting a saved template) -->
+<dialog id="confirm-modal" class="modal modal-confirm">
+  <header class="modal-head">
+    <h2 id="confirm-title">Confirm</h2>
+    <button class="btn btn-quiet" data-close aria-label="Close">Close</button>
+  </header>
+  <p id="confirm-message" class="modal-body"></p>
+  <footer class="form-footer">
+    <button id="confirm-cancel" type="button" class="btn">Cancel</button>
+    <button id="confirm-alt" type="button" class="btn" hidden>Alt</button>
+    <button id="confirm-ok" type="button" class="btn btn-primary">OK</button>
+  </footer>
+</dialog>
+
+<!-- Save as template dialog -->
+<dialog id="preset-save-modal" class="modal">
+  <header class="modal-head">
+    <h2>Save as template</h2>
+    <button class="btn btn-quiet" data-close aria-label="Close">Close</button>
+  </header>
+  <form id="preset-save-form" class="form">
+    <label>Name <input name="name" type="text" required></label>
+    <label>Description <input name="description" type="text"></label>
+    <footer class="form-footer">
+      <button type="button" data-close class="btn">Cancel</button>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </footer>
+  </form>
+</dialog>
+
+<!-- Search palette -->
+<dialog id="palette" class="palette" aria-label="Search the Code">
+  <div class="palette-head">
+    <input id="palette-input" placeholder="Search by citation or name: Rule 10b-5, § 77e, Reg D…" aria-label="Search provisions"
+           role="combobox" aria-expanded="true" aria-controls="palette-results" aria-autocomplete="list"
+           autocomplete="off" spellcheck="false" autofocus>
+    <button id="palette-close" class="btn btn-quiet" aria-label="Close search">Close</button>
+  </div>
+  <div id="palette-hint" class="palette-hint">
+    <p class="palette-try">Try a rule (<b>Rule 10b-5</b>), a section (<b>§ 77e</b>, <b>Section 12(a)(2)</b>, <b>Exchange Act § 10(b)</b>),
+      a whole regulation (<b>Reg D</b>), or an idea (<b>accredited investor</b>).</p>
+    <p class="palette-none" hidden>Nothing matches. Try a rule number such as 10b-5, or a section such as § 77e.</p>
+  </div>
+  <ul id="palette-results" class="results palette-results" role="listbox" aria-label="Search results" tabindex="0"></ul>
+  <div class="palette-foot">
+    <span id="palette-status" class="palette-status" role="status" aria-live="polite"></span>
+    <span class="palette-keys">↑↓ move · ↵ add · ⇧↵ add and close · esc close</span>
+    <button id="palette-done" class="btn btn-primary">Done</button>
+  </div>
+</dialog>
+
+<!-- Templates -->
+<dialog id="presets-modal" class="modal modal-wide">
+  <header class="modal-head">
+    <h2>Templates</h2>
+    <button class="btn btn-quiet" data-close aria-label="Close">Close</button>
+  </header>
+  <p class="modal-intro">A template is a starting point: pick one, then add and remove whatever your course needs.</p>
+  <div id="presets-list" class="presets-grid"></div>
+</dialog>
+
+<!-- Cover & settings: every change applies at once -->
+<dialog id="metadata-modal" class="modal modal-wide">
+  <header class="modal-head">
+    <h2>Cover &amp; settings</h2>
+    <button class="btn btn-quiet" data-close aria-label="Close">Close</button>
+  </header>
+  <form id="metadata-form" class="form settings">
+    <fieldset>
+      <legend>Cover</legend>
+      <label>Title <input name="title" type="text" autocomplete="off"></label>
+      <label>Subtitle <input name="subtitle" type="text" autocomplete="off"></label>
+      <div class="field-row">
+        <label>Course <input name="course" type="text" autocomplete="off" placeholder="Securities Regulation"></label>
+        <label>Term <input name="term" type="text" autocomplete="off" placeholder="Fall 2027"></label>
+      </div>
+      <div class="field-row">
+        <label>Professor <input name="professor" type="text" autocomplete="off"></label>
+        <label>School <input name="school" type="text" autocomplete="off"></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Book</legend>
+      <label>Page size
+        <select name="trim">
+          <option value="letter">US Letter (8.5 × 11 in.)</option>
+          <option value="7x10">7 × 10 in.</option>
+          <option value="6x9">6 × 9 in.</option>
+        </select>
+      </label>
+      <div class="choice-group" role="radiogroup" aria-label="Section numbering">
+        <span class="choice-label">Numbering</span>
+        <label class="choice"><input type="radio" name="numbering" id="toggle-original" value="original">
+          <span><b>Act sections</b><span class="choice-eg">Securities Act § 5 · 15 U.S.C. § 77e</span></span></label>
+        <label class="choice"><input type="radio" name="numbering" id="toggle-codified" value="codified">
+          <span><b>U.S. Code sections</b><span class="choice-eg">15 U.S.C. § 77e · Securities Act § 5</span></span></label>
+      </div>
+      <label class="check"><input name="sourceCredits" type="checkbox"> Source credits under each section <span class="check-note">(the Statutes at Large citation)</span></label>
+      <label class="check"><input name="includeColophon" type="checkbox"> Colophon page <span class="check-note">(sources, currency, and a note that the text is public law)</span></label>
+    </fieldset>
+    <footer class="form-footer">
+      <button type="submit" class="btn btn-primary">Done</button>
+    </footer>
+  </form>
+</dialog>
+
+<!-- Keyboard help modal -->
+<dialog id="help-modal" class="modal">
+  <header class="modal-head">
+    <h2>Keyboard shortcuts</h2>
+    <button class="btn btn-quiet" data-close aria-label="Close">Close</button>
+  </header>
+  <ul class="help-list">
+    <li><span class="kbd">⌘K</span> or <span class="kbd">Ctrl-K</span> open search</li>
+    <li><span class="kbd">↑</span> <span class="kbd">↓</span> move through search results</li>
+    <li><span class="kbd">↵</span> add the highlighted result</li>
+    <li><span class="kbd">⇧↵</span> add it and close search</li>
+    <li><span class="kbd">Esc</span> close search or a window</li>
+    <li><span class="kbd">⌘Z</span> undo · <span class="kbd">⇧⌘Z</span> redo <span class="help-note">(Ctrl on Windows and Linux)</span></li>
+  </ul>
+</dialog>
+
+<script src="./assets/vendor/fuse.min.js"></script>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
